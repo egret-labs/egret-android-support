@@ -1,0 +1,13 @@
+version: 1.5.2
+apkFileName: EgretFrameworkNative.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  - 1
+sdkInfo:
+  minSdkVersion: '9'
+  targetSdkVersion: '10'
+packageInfo:
+  cur_package: org.egret.egretframeworknative
+  orig_package: org.egret.egretframeworknative
+compressionType: false
