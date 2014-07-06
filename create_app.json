@@ -1,0 +1,32 @@
+{
+    "template_name": "HelloEgret",
+    "template": {
+        "source": [
+            "proj.android"
+        ]
+    },
+    "rename_tree": {
+        "content": [
+            "proj.android/src/org/egret/java/HelloEgret.java",
+            "proj.android/AndroidManifest.xml",
+            "proj.android/res/values/strings.xml",
+            "proj.android/jni/Android.mk",
+            "proj.android/.project"
+        ],
+        "file_name": [
+            "proj.android/src/org/egret/java/HelloEgret.java",
+            "proj.android/jni/HelloEgret.cpp"
+        ]
+    },
+    "game": {
+        "target": [
+            "proj.android/assets/"
+        ],
+        "h5_tree": [
+            "bin-debug/",
+            "launcher/",
+            "resource/",
+            "src/"
+        ]
+    }
+}
