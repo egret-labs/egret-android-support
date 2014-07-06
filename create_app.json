@@ -2,7 +2,8 @@
     "template_name": "HelloEgret",
     "template": {
         "source": [
-            "proj.android"
+            "proj.android",
+            "thirdparty"
         ]
     },
     "rename_tree": {
