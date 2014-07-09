@@ -22,12 +22,6 @@
     "game": {
         "target": [
             "proj.android/assets/"
-        ],
-        "h5_tree": [
-            "bin-debug/",
-            "launcher/",
-            "resource/",
-            "src/"
         ]
     }
 }
