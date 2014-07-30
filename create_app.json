@@ -21,7 +21,7 @@
     },
     "game": {
         "target": [
-            "proj.android/assets/"
+            "proj.android/assets/egret-game"
         ]
     }
 }
