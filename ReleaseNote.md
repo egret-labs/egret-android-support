@@ -1,6 +1,23 @@
 ##Egret Android Support Release Notes 
-最近更新时间：2014年7月8日
-###Egret Android Support 1.0.1 (RC1) Release Note
+最近更新时间：2014年8月8日
+###Egret Android Support 1.0Final ReleaseNode
+- **[新特性]** 新增读写文件的功能。
+- **[新特性]** 新增画线功能。
+- **[改进]** 实现自动批处理（AutoBatching）。提升了渲染速度。
+- **[改进]** 优化文字处理速度。
+- **[修复]** 修复特定状态下，图片旋转后绘制位置异常的BUG。
+- **[修复]** 修复文字位置不准确的BUG。
+- **[重构]** 重构矩阵模块。使用新的矩阵与向量处理模块。重构矩阵管理类。
+- **[重构]** 重构渲染模块。为了实现自动批处理。重构渲染模块，以支持自动批处理。
+- **[重构]** 重构文字模块。为了实现自动批处理。重构文字处理模块，以支持自动批处理，以及提高渲染速度。
+####已知问题
+
+- 暂不支持 Graphics API
+- 暂不支持 TextField 粗体/斜体
+
+----------
+
+###Egret Android Support 1.0.1 RC Release Note
 - **[新特性]** 增加Android支持。提供了全新的Andorid项目模板，以便使用egret新的create_app命令创建新Eclipse项目。
 - **[新特性]** 增加文字描边的功能。
 
