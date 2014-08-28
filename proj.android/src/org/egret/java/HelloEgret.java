@@ -1,9 +1,9 @@
-package org.egret.game;
+package org.egret.java;
 
 import android.os.Bundle;
 import org.egret.egretframeworknative.EgretRuntimeActivity;
 
-public class MainActivity extends EgretRuntimeActivity {
+public class HelloEgret extends EgretRuntimeActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
