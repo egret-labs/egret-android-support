@@ -10,7 +10,7 @@ import org.json.JSONTokener;
 import android.util.Log;
 
 public class ExternalInterface implements PluginHelper.PluginListener{
-	private static final String LOG_TAG ="Test";
+	private static final String LOG_TAG ="ExternalInterface";
 	
 	public static void run(){
 		PluginHelper.addPluginLlistener(new ExternalInterface());
