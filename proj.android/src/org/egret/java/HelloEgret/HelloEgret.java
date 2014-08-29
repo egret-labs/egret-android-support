@@ -1,4 +1,4 @@
-package org.egret.java;
+package org.egret.java.HelloEgret;
 
 import android.os.Bundle;
 
