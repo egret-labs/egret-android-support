@@ -10,15 +10,21 @@ import org.json.JSONTokener;
 import android.util.Log;
 
 public class ExternalInterface implements PluginHelper.PluginListener{
-	private static final String LOG_TAG ="Test";
+	private static final String LOG_TAG ="ExternalInterface";
 	
 	public static void run(){
 		PluginHelper.addPluginLlistener(new ExternalInterface());
 	}
 	
 	public static void call(String name, String value){
-		
-		PluginHelper.postInfoToJS(value);
+		JSONObject obj = new JSONObject();
+		try {
+			obj.put("functionName", name);
+			obj.put("value", value);
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		PluginHelper.postInfoToJS(obj.toString());
 	}
 	
 	private static HashMap<String , IExternalInterface> callBackList = new HashMap<String , IExternalInterface>();
