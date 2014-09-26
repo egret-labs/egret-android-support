@@ -42,6 +42,9 @@ public class ExternalInterface implements PluginHelper.PluginListener{
 			if(callBack != null) {
 				callBack.call(obj.getString("value"));
 			}
+			else {
+				Log.i(LOG_TAG, "调用了java没有注册的方法:" + functionName);
+			}
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
