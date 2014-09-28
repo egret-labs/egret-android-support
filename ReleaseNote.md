@@ -1,10 +1,11 @@
 ##Egret Android Support Release Notes 
 ---
 
-最近更新时间：2014年9月26日
-###Egret Android Support 1.1 ReleaseNote
+更新时间：2014年9月26日
+###Egret Android Support 1.1.0 ReleaseNote
 ---
-- **[新特性]** 替换JS引擎。替换SpideMonkey为V8。
+- **[新特性]** 使用全新的JavaScript引擎，性能提升至少75%，体积减少28%以上
+- **[新特性]** 使用Android原生网络接口，扩展性更佳
 - **[新特性]** 增加文本输入功能。
 - **[改进]** 改Http访问为并发模式。
 - **[改进]** Http访问放大JAVA端实现。
@@ -14,7 +15,7 @@
 - **[修复]** 修复文本输入，获取已有文本出现乱码的BUG。
 - **[修复]** 修复文本输入，键盘弹出和收回异常的BUG。
 
-最近更新时间：2014年9月12日
+更新时间：2014年9月12日
 ###Egret Android Support 1.0.6 ReleaseNote
 ---
 - **[新特性]** 自动去除UTF8文件BOM。
@@ -30,7 +31,7 @@
 - 暂不支持 Graphics API
 - 暂不支持 TextField 粗体/斜体
 
-最近更新时间：2014年8月29日
+更新时间：2014年8月29日
 ###Egret Android Support 1.0.5 ReleaseNote
 ---
 - **[新特性]** 新增原生插件接入功能。
@@ -86,5 +87,3 @@
 - 暂不支持 Graphics API
 
 - 暂不支持 TextField 粗体/斜体
-
-
