@@ -1,6 +1,18 @@
 ##Egret Android Support Release Notes 
 ---
 
+最近更新时间：2014年9月26日
+###Egret Android Support 1.1 ReleaseNote
+---
+- **[新特性]** 替换JS引擎。替换SpideMonkey为V8。
+- **[新特性]** 增加文本输入功能。
+- **[改进]** 改Http访问为并发模式。
+- **[改进]** Http访问放大JAVA端实现。
+- **[修复]** 修正横屏游戏，关屏后，在回到游戏会死机的BUG。
+- **[修复]** Http POST模式上传数据异常的BUG。
+- **[修复]** 绘制矩形，线等。混合模式异常的BUG。
+- **[修复]** 修复文本输入，获取已有文本出现乱码的BUG。
+- **[修复]** 修复文本输入，键盘弹出和收回异常的BUG。
 
 最近更新时间：2014年9月12日
 ###Egret Android Support 1.0.6 ReleaseNote
