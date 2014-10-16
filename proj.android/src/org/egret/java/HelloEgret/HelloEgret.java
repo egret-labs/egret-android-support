@@ -12,6 +12,7 @@ public class HelloEgret extends EgretRuntimeActivity {
 		super.onCreate(savedInstanceState);
 		ExternalInterface.run();
 	}
+
 }
 
 
