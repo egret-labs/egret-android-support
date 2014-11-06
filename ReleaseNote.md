@@ -1,15 +1,27 @@
 ##Egret Android Support Release Notes 
 ---
+
+更新时间：2014年10月31日
+###Egret Android Support 1.1.2 Release Notes
+---
+- **[新特性]** 增加EGTView接口
+- **[新特性]** 增加全局ColorTransform接口
+- **[改进]** 使用裁切替换矩形蒙板的性能
+- **[改进]** V8的垃圾回收
+- **[变更]** setGlobalAlpha接口
+- **[修复]** 下载中游戏退出的崩溃BUG
+- **[修复]** 修复若干BUG
+
 更新时间：2014年10月17日
 ###Egret Android Support 1.1.1 ReleaseNote
 ---
-- **[新特性]** 增加设置全局Blend模式的接口。
+- **[新特性]** 增加设置全局Blend模式接口。
 - **[改进]** 优化下载速度。
 - **[改进]** 优化内存使用，减少内存占用。
 - **[修复]** 修复Graphics相关接口，Alpha取值错误的BUG。
 - **[修复]** 修复特定情况下，软键盘收回，导致崩溃的BUG。
-- **[修复]** 修复LocalStorags相关BUG。
-- **[修复]** 修复全屏模式下，多行输入，按完成建，文本接收异常的BUG。
+- **[修复]** 修复LocalStorage相关BUG。
+- **[修复]** 修复全屏模式下，多行输入，按完成键，文本接收异常的BUG。
 - **[修复]** 修复文本输入，键盘弹出和收回异常的BUG。
 - **[修复]** 修复插件接口相关BUG。
 
