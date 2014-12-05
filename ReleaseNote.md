@@ -1,6 +1,21 @@
 ##Egret Android Support Release Notes 
 ---
 
+更新时间：2014年11月28日
+Egret Android Support 1.1.4 Release Notes
+--
+- **[新特性]** 增加本地游戏以zip包的方式发布
+- **[改进]** 游戏文件管理模块
+- **[改进]** 重构EgretRuntime
+- **[改进]** 重构错误和不当的变量名
+- **[变更]** 游戏资源搜索的优先级
+- **[修复]** Clip引发的触摸bug
+- **[修复]** ColorTransform的bug
+- **[修复]** 接入第三方sdk时的bug
+- **[修复]** 游戏加载egret动态库的bug
+- **[修复]** 其它的bug
+
+
 更新时间：2014年10月31日
 ###Egret Android Support 1.1.2 Release Notes
 ---
