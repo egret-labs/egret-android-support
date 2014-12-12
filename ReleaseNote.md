@@ -1,9 +1,28 @@
 ##Egret Android Support Release Notes 
 ---
 
-更新时间：2014年11月28日
-Egret Android Support 1.1.4 Release Notes
+###Egret Android Support 1.5 Release Notes
 --
+更新时间：2014年12月12日
+
+- **[新特性]** WebSocket接口支持
+- **[改进]** 游戏入口文件的启动方式
+- **[改进]** 重构graphics相关的JavaScript绑定代码部分
+- **[改进]** APP崩溃后的错误的抛出
+- **[变更]** 游戏资源搜索的优先级
+- **[修复]** 触摸点坐标不正确的bug
+- **[修复]** 5.0弹出键盘的bug
+- **[修复]** 其它的bug
+
+####已知问题
+- 5.0 字体显示bug
+
+
+
+###Egret Android Support 1.1.4 Release Notes
+--
+更新时间：2014年11月28日
+
 - **[新特性]** 增加本地游戏以zip包的方式发布
 - **[改进]** 游戏文件管理模块
 - **[改进]** 重构EgretRuntime
@@ -16,9 +35,11 @@ Egret Android Support 1.1.4 Release Notes
 - **[修复]** 其它的bug
 
 
-更新时间：2014年10月31日
+
 ###Egret Android Support 1.1.2 Release Notes
 ---
+更新时间：2014年10月31日
+
 - **[新特性]** 增加EGTView接口
 - **[新特性]** 增加全局ColorTransform接口
 - **[改进]** 使用裁切替换矩形蒙板的性能
@@ -27,9 +48,11 @@ Egret Android Support 1.1.4 Release Notes
 - **[修复]** 下载中游戏退出的崩溃BUG
 - **[修复]** 修复若干BUG
 
-更新时间：2014年10月17日
+
 ###Egret Android Support 1.1.1 ReleaseNote
 ---
+更新时间：2014年10月17日
+
 - **[新特性]** 增加设置全局Blend模式接口。
 - **[改进]** 优化下载速度。
 - **[改进]** 优化内存使用，减少内存占用。
@@ -40,9 +63,11 @@ Egret Android Support 1.1.4 Release Notes
 - **[修复]** 修复文本输入，键盘弹出和收回异常的BUG。
 - **[修复]** 修复插件接口相关BUG。
 
-更新时间：2014年9月26日
+
 ###Egret Android Support 1.1.0 ReleaseNote
 ---
+更新时间：2014年9月26日
+
 - **[新特性]** 使用全新的JavaScript引擎，性能提升至少75%，体积减少28%以上
 - **[新特性]** 使用Android原生网络接口，扩展性更佳
 - **[新特性]** 增加文本输入功能。
@@ -54,9 +79,11 @@ Egret Android Support 1.1.4 Release Notes
 - **[修复]** 修复文本输入，获取已有文本出现乱码的BUG。
 - **[修复]** 修复文本输入，键盘弹出和收回异常的BUG。
 
-更新时间：2014年9月12日
+
 ###Egret Android Support 1.0.6 ReleaseNote
 ---
+更新时间：2014年9月12日
+
 - **[新特性]** 自动去除UTF8文件BOM。
 - **[新特性]** 增加Http post支持。
 - **[改进]** 优化Http请求队列处理方式。
@@ -70,9 +97,11 @@ Egret Android Support 1.1.4 Release Notes
 - 暂不支持 Graphics API
 - 暂不支持 TextField 粗体/斜体
 
-更新时间：2014年8月29日
+
 ###Egret Android Support 1.0.5 ReleaseNote
 ---
+更新时间：2014年8月29日
+
 - **[新特性]** 新增原生插件接入功能。
 - **[新特性]** 新增文件下载功能。
 - **[改进]** 不再需要NDK编译。
@@ -88,6 +117,7 @@ Egret Android Support 1.1.4 Release Notes
 
 ###Egret Android Support 1.0Final ReleaseNote
 ---
+
 - **[新特性]** 新增读写文件的功能。
 - **[新特性]** 新增画线功能。
 - **[改进]** 实现自动批处理（AutoBatching）。提升了渲染速度。
