@@ -43,7 +43,7 @@ public class HelloEgret extends Activity {
 			break;
 		default:
 			// local zip RELEASE mode, default mode, `egret publish -compile --runtime native`
-			// 私有空间zip包发布模式, 默认模式, `egret publish -compile --runtime native`
+			// 私有空间zip包发布模式, 默认模式, `egret publish -compile --runtime native`，并修改为game_code_xxxx.zip，可见于assets/egret-game
 			loaderUrl = "game_code.zip";
 			break;
 		}
