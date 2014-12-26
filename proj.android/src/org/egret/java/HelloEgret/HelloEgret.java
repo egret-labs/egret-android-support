@@ -10,6 +10,9 @@ import android.view.View;
 
 public class HelloEgret extends Activity {
 
+	// egret publish之后，修改以下常量为生成的game_code名
+	private static final String EGRET_PUBLISH_ZIP = "game_code_0123456789.zip";
+	
 	private EgretGameEngine gameEngine;
 	private String egretRoot;
 	private String gameId;
@@ -21,7 +24,10 @@ public class HelloEgret extends Activity {
 		super.onCreate(savedInstanceState);
 		egretRoot = new File(getFilesDir(), "egret").getAbsolutePath();
 		gameId = "local";
-		setLoaderUrl(0);
+		
+		// DEBUG 使用 2
+		setLoaderUrl(2);
+		
 		gameEngine = new EgretGameEngine();
 		gameEngine.game_engine_init(this, egretRoot, gameId, loaderUrl);
 		View gameEngineView = gameEngine.game_engine_get_view();
@@ -32,19 +38,20 @@ public class HelloEgret extends Activity {
 	private void setLoaderUrl(int mode) {
 		switch (mode) {
 		case 2:
-			// sd card zip DEBUG mode, use permission WRITE_EXTERNAL_STORAGE
-			// 本地sd包调试模式，需要权限 WRITE_EXTERNAL_STORAGE
-			loaderUrl = "/sdcard/game_code.zip";
+			// local DEBUG mode
+			// 本地DEBUG模式，发布请使用0本地zip，或者1网络获取zip
+			loaderUrl = "";
 			break;
 		case 1:
 			// http request zip RELEASE mode, use permission INTERNET
 			// 请求网络zip包发布模式，需要权限 INTERNET
-			loaderUrl = "http://www.example.com/game_code.zip";
+			loaderUrl = "http://www.example.com/" + EGRET_PUBLISH_ZIP;
 			break;
+
 		default:
 			// local zip RELEASE mode, default mode, `egret publish -compile --runtime native`
-			// 私有空间zip包发布模式, 默认模式, `egret publish -compile --runtime native`，并修改为game_code_xxxx.zip，可见于assets/egret-game
-			loaderUrl = "game_code.zip";
+			// 私有空间zip包发布模式, 默认模式, `egret publish -compile --runtime native`
+			loaderUrl = EGRET_PUBLISH_ZIP;
 			break;
 		}
 	}
