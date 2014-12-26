@@ -6,6 +6,7 @@ import org.egret.egretframeworknative.engine.EgretGameEngine;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 
 public class HelloEgret extends Activity {
@@ -53,6 +54,31 @@ public class HelloEgret extends Activity {
 			// 私有空间zip包发布模式, 默认模式, `egret publish -compile --runtime native`
 			loaderUrl = EGRET_PUBLISH_ZIP;
 			break;
+		}
+	}
+
+		
+	@Override
+	public void onPause() {
+		super.onPause();
+		gameEngine.game_engine_onPause();
+	}
+	
+	@Override
+	public void onResume() {
+		super.onResume();
+		gameEngine.game_engine_onResume();
+	}
+
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		switch (keyCode) {
+		case KeyEvent.KEYCODE_BACK:
+			gameEngine.game_engine_onStop();
+			finish();
+			return true;
+		default:
+			return super.onKeyDown(keyCode, event);	
 		}
 	}
 	
