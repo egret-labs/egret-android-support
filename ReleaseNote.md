@@ -1,6 +1,23 @@
 ##Egret Android Support Release Notes 
 ---
 
+### Egret Android Support 1.5.1 Release Notes
+--
+更新时间：2014年12月25日
+
+- **[新特性]** 增加sdcard调试模式入口
+- **[新特性]** 增加Reload功能
+- **[新特性]** 增加console.warning console.error支持
+- **[改进]** 用于生成的模板文件
+- **[改进]** 整理部分Log，使其更清晰
+- **[改进]** 退出时偶尔卡顿的情况
+- **[改进]** 文字模糊的bug
+- **[修复]** 退出时下载未被及时取消引发的bug
+- **[修复]** Android 5.0字体显示bug
+
+####已知问题
+- Android 5.0 声音播放bug
+
 ###Egret Android Support 1.5 Release Notes
 --
 更新时间：2014年12月12日
