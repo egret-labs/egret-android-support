@@ -1,6 +1,20 @@
 ##Egret Android Support Release Notes 
 ---
 
+### Egret Android Support 1.5.3 Release Notes
+--
+更新时间：2015年01月23日
+- **[新特性]** 增加WebView支持
+- **[改进]** 更稳定的生命周期管理
+- **[改进]** 更全面的错误日志
+- **[改进]** 提高下载速度
+- **[改进]** 增加对gif图的支持。只能显示第一帧。
+- **[修复]** 修正DesignSize点到物理屏幕点计算错误的bug
+- **[修复]** 特定分辨率上触摸不准确的bug
+- **[修复]** 修正网络超时的设置
+- **[修复]** 修复https无法下载的问题
+
+
 ### Egret Android Support 1.5.1 Release Notes
 --
 更新时间：2014年12月25日
