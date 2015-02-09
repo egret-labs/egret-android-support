@@ -1,7 +1,9 @@
 package org.egret.java.HelloEgret;
 
 import java.io.File;
+import java.util.HashMap;
 
+import org.egret.egretframeworknative.EgretRuntime;
 import org.egret.egretframeworknative.engine.EgretGameEngine;
 
 import android.app.Activity;
@@ -18,7 +20,7 @@ public class HelloEgret extends Activity {
 	private String egretRoot;
 	private String gameId;
 	private String loaderUrl;
-
+	private String updateUrl;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -30,7 +32,15 @@ public class HelloEgret extends Activity {
 		setLoaderUrl(2);
 		
 		gameEngine = new EgretGameEngine();
-		gameEngine.game_engine_init(this, egretRoot, gameId, loaderUrl);
+		////////////////////////////////////
+		HashMap<String ,String> options = new HashMap<String ,String>();
+		options.put(EgretRuntime.OPTION_EGRET_GAME_ROOT, egretRoot);
+		options.put(EgretRuntime.OPTION_GAME_ID, gameId);
+		options.put(EgretRuntime.OPTION_GAME_LOADER_URL, loaderUrl);
+		options.put(EgretRuntime.OPTION_GAME_UPDATE_URL, updateUrl);
+		gameEngine.game_engine_set_options(options);
+		///////////////////////////////////
+		gameEngine.game_engine_init(this);
 		View gameEngineView = gameEngine.game_engine_get_view();
 		setContentView(gameEngineView);
 	}
@@ -42,17 +52,20 @@ public class HelloEgret extends Activity {
 			// local DEBUG mode
 			// 本地DEBUG模式，发布请使用0本地zip，或者1网络获取zip
 			loaderUrl = "";
+			updateUrl = "";
 			break;
 		case 1:
 			// http request zip RELEASE mode, use permission INTERNET
 			// 请求网络zip包发布模式，需要权限 INTERNET
 			loaderUrl = "http://www.example.com/" + EGRET_PUBLISH_ZIP;
+			updateUrl = "http://www.example.com/";
 			break;
 
 		default:
 			// local zip RELEASE mode, default mode, `egret publish -compile --runtime native`
 			// 私有空间zip包发布模式, 默认模式, `egret publish -compile --runtime native`
 			loaderUrl = EGRET_PUBLISH_ZIP;
+			updateUrl = "";
 			break;
 		}
 	}
