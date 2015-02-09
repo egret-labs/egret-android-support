@@ -1,5 +1,15 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 1.5.4 Release Notes
+--
+更新时间：2015年02月05日
+- **[改进]** 优化下载与Http模块。
+- **[改进]** 优化文字处理，减少文字对内存的需求。
+- **[改进]** 优化AutoBatch。减少内存冗余。
+- **[修复]** 解决在某些机型无故Crash的问题。
+- **[修复]** 解决横屏游戏，从锁屏状态返回游戏有可能显示异常的问题。
+- **[修复]** 解决graphics旋转显示不正确的问题。
+
 
 ### Egret Android Support 1.5.3 Release Notes
 --
