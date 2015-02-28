@@ -1,5 +1,10 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 1.5.5 Release Notes
+--
+更新时间：2015年02月27日
+- **[新特性]** 增加RenderTexture。
+
 ### Egret Android Support 1.5.4 Release Notes
 --
 更新时间：2015年02月05日
