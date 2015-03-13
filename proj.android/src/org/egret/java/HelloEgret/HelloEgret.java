@@ -15,6 +15,7 @@ public class HelloEgret extends Activity {
 
 	// egret publish之后，修改以下常量为生成的game_code名
 	private static final String EGRET_PUBLISH_ZIP = "game_code_0123456789.zip";
+	private static final String EGRET_ROOT = "egret";
 	
 	private EgretGameEngine gameEngine;
 	private String egretRoot;
@@ -25,26 +26,28 @@ public class HelloEgret extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		egretRoot = new File(getFilesDir(), "egret").getAbsolutePath();
+		egretRoot = new File(getFilesDir(), EGRET_ROOT).getAbsolutePath();
 		gameId = "local";
 		
 		// DEBUG 使用 2
 		setLoaderUrl(2);
 		
 		gameEngine = new EgretGameEngine();
-		////////////////////////////////////
-		HashMap<String ,String> options = new HashMap<String ,String>();
-		options.put(EgretRuntime.OPTION_EGRET_GAME_ROOT, egretRoot);
-		options.put(EgretRuntime.OPTION_GAME_ID, gameId);
-		options.put(EgretRuntime.OPTION_GAME_LOADER_URL, loaderUrl);
-		options.put(EgretRuntime.OPTION_GAME_UPDATE_URL, updateUrl);
+		HashMap<String, Object> options = getGameOptions();
 		gameEngine.game_engine_set_options(options);
-		///////////////////////////////////
 		gameEngine.game_engine_init(this);
 		View gameEngineView = gameEngine.game_engine_get_view();
 		setContentView(gameEngineView);
 	}
 	
+	private HashMap<String, Object> getGameOptions() {
+		HashMap<String, Object> options = new HashMap<String, Object>();		
+		options.put(EgretRuntime.OPTION_EGRET_GAME_ROOT, egretRoot);
+		options.put(EgretRuntime.OPTION_GAME_ID, gameId);
+		options.put(EgretRuntime.OPTION_GAME_LOADER_URL, loaderUrl);
+		options.put(EgretRuntime.OPTION_GAME_UPDATE_URL, updateUrl);
+		return options;
+	}
 	
 	private void setLoaderUrl(int mode) {
 		switch (mode) {
