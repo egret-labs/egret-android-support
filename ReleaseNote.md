@@ -1,6 +1,18 @@
 ##Egret Android Support Release Notes 
 ---
 
+### Egret Android Support 1.6.1 Release Notes
+--
+更新时间：2015年03月27日
+- **[新特性]** 更明确的文件操作
+- **[新特性]** 增加文字描边效果
+- **[新特性]** 新增log级别的控制接口
+- **[改进]** 重构GameManager的结构
+- **[改进]** 改进WebView的支持方式
+- **[改进]** 重构GameEngine的接口
+- **[修复]** 蒙板位置错误的bug
+- **[修复]** 其它若干bug
+
 ### Egret Android Support 1.6.0 Release Notes
 --
 更新时间：2015年03月15日
