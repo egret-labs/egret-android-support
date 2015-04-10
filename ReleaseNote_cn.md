@@ -1,6 +1,12 @@
 ##Egret Android Support Release Notes 
 ---
 
+### Egret Android support 1.6.2 Release Notes
+--
+更新时间：2015年04月09日
+- **[改进]** 增强渲染性能
+- **[修复]** 其它若干bug，提升稳定性
+
 ### Egret Android Support 1.6.1 Release Notes
 --
 更新时间：2015年03月27日
