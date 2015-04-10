@@ -1,6 +1,12 @@
 ##Egret Android Support Release Notes 
 ---
 
+### Egret Android support 1.6.2 Release Notes
+--
+Updated: April, 09 2015
+- **[UPDATE]** Improve render performance
+- **[FIX]** Bugs fix for stability improvements
+
 ### Egret Android Support 1.6.1 Release Notes
 --
 Updated: March, 27 2015
