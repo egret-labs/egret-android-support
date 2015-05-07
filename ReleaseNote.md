@@ -1,5 +1,15 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 1.7.1 Release Notes
+--
+Update: May, 07 2015
+- **[UPDATE]** Reduced text module's usage of memory 
+- **[UPDATE]** Optimized game downloading and unzipping 
+- **[UPDATE]** Optimized texture memory management
+- **[FIX]** Fixed the bug of multiple memory leaks
+- **[FIX]** Fixed a thread lock bug
+- **[FIX]** Downloading failure on some types of devices 
+- **[FIX]** RenderTexture cannot be created on some types of devices.
 
 ### Egret Android Support 1.7.0 Release Notes
 --
