@@ -1,5 +1,15 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 1.7.2 Release Notes
+--
+更新时间：2015年05月20日
+
+- **[改进]** 改进数学库。
+- **[改进]** 改进内存管理。
+- **[修复]** 修复RenderTexture引起的崩溃。
+- **[修复]** 修复异步加载纹理有可能死锁的BUG。
+- **[修复]** 修复在Android 5.X.X系统上不能正常显示文字的BUG。
+- **[修复]** 修复JNI相关的内存问题。
 
 ### Egret Android Support 1.7.1 Release Notes
 --

@@ -1,5 +1,16 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 1.7.2 Release Notes
+--
+Update: May, 20 2015
+
+- **[UPDATE]** Math library
+- **[UPDATE]** Memory management
+- **[FIX]** Crash caused by RenderTexture
+- **[FIX]** Possible deadlocks caused by asynchronous texture loading
+- **[FIX]** Text display anomaly in Android 5.X.X systems
+- **[FIX]** JNI related memory problems
+
 ### Egret Android Support 1.7.1 Release Notes
 --
 Update: May, 07 2015
@@ -43,4 +54,4 @@ Updated: March, 27 2015
 - **[UPDATE]** Improvement of WebView support
 - **[FIX]** Bug fix of mask position error
 - **[FIX]** Serveral other bug fix
-
+
