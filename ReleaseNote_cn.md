@@ -1,5 +1,15 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 1.7.3 Release Notes
+--
+更新时间：2015年06月02日
+
+- **[改进]** 改进游戏资源管理。
+- **[改进]** 改进纹理异步加载。
+- **[修复]** 修复九宫格显示异常的BUG。
+- **[修复]** 修复纹理释放可能引起的崩溃。
+- **[修复]** 修复EgretNativeUI导致crash的问题。
+
 ### Egret Android Support 1.7.2 Release Notes
 --
 更新时间：2015年05月20日

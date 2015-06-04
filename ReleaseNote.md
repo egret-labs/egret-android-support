@@ -1,5 +1,15 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 1.7.3 Release Notes
+--
+Update: Jun, 02 2015
+
+- **[UPDATE]** Game resource management. 
+- **[UPDATE]** Texture asynchronous loading
+- **[FIX]** Abnormal display of scale9Grid.  
+- **[FIX]** Crash caused by texture release.
+- **[FIX]** Crash caused by EgretNativeUI. 
+
 ### Egret Android Support 1.7.2 Release Notes
 --
 Update: May, 20 2015
