@@ -1,8 +1,20 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 2.0.0 Release Notes
+--
+Update: June, 19 2015
+
+- **[Add]** Support on Egret's own compressed texture.
+- **[Update]** Improved Graphics performance.
+- **[Update]** RenderTexture's use of video memory.
+- **[Fix]** A drawing anomaly of RenderTexture.
+- **[Fix]** A bug on ColorTransform.
+- **[Fix]** Other bugs.
+
+---
 ### Egret Android Support 1.7.3 Release Notes
 --
-Update: Jun, 02 2015
+Update: June, 02 2015
 
 - **[UPDATE]** Game resource management. 
 - **[UPDATE]** Texture asynchronous loading

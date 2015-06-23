@@ -1,5 +1,17 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 2.0.0 Release Notes
+--
+更新时间：2015年06月19日
+（2.0.0 为1.7.1到1.7.3版本的稳定版本的合集）
+
+- **[新特性]** 增加对Egret自有压缩纹理的支持。
+- **[改进]** 改进Graphics性能。
+- **[改进]** 改进RenderTexture的对显存的使用。
+- **[修复]** 修复RenderTexture的一个绘制异常。
+- **[修复]** 修复ColorTransform的一个BUG。
+- **[修复]** 修复其它若干BUG。
+
 ### Egret Android Support 1.7.3 Release Notes
 --
 更新时间：2015年06月02日
