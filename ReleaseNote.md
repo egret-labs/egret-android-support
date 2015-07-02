@@ -1,5 +1,17 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 2.0.1 Release Notes
+--
+Update: July, 2 2015
+
+- **[Update]** Improved performance and stability.
+- **[Update]** Refactor network module.
+- **[Update]** Refactor touch process module.
+- **[Fix]** A bug in Download module.
+- **[Fix]** Bugs in Nest module.
+
+##Egret Android Support Release Notes 
+---
 ### Egret Android Support 2.0.0 Release Notes
 --
 Update: June, 19 2015

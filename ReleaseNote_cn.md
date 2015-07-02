@@ -1,5 +1,15 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 2.0.1 Release Notes
+--
+更新时间：2015年07月02日
+
+- **[改进]** 提升性能与稳定性
+- **[重构]** 重构网络模块。
+- **[重构]** 重构触摸响应模块。
+- **[修复]** 修复Download模块一个Bug。
+- **[修复]** 修复Nest模块一些BUG。
+
 ### Egret Android Support 2.0.0 Release Notes
 --
 更新时间：2015年06月19日
