@@ -1,5 +1,33 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 2.0_final Release Notes
+--
+Update: July, 16 2015
+
+- **[Add]** Support on Egret's own compressed texture.
+- **[Add]** New text input mode improves input experience. 
+- **[Add]** Rewrote network module.
+- **[Update]** Refactored touch response module.
+- **[Update]** JNI related structure.
+- **[Update]** Life cycle management.
+- **[Update]** Game resource management.
+- **[Update]** Texture asynchronous loading.
+- **[Update]** Graphics performance.
+- **[Update]** RenderTexture's use of video memory.
+- **[Update]** Math library.
+- **[Update]** Memory management.
+- **[Update]** Reduced text module's use of memory.
+- **[Update]** Optimized game downloading and unzipping.
+- **[Update]** Optimized texture memory management.
+- **[Update]** Enhanced rendering performance.
+- **[Fix]** RenderTexture BUG。
+- **[Fix]** Some Nest module bugs.
+- **[Fix]** Text display anomaly on Android 5.X.X.
+- **[Fix]** JNI related memory problem.
+- **[Fix]** File downloading failures on some cellphone types.
+- **[Fix]** RenderTexture creating failure on some cellphone types.
+- **[Fix]** Other bugs.
+
 ### Egret Android Support 2.0.1 Release Notes
 --
 Update: July, 2 2015
@@ -88,4 +116,3 @@ Updated: March, 27 2015
 - **[UPDATE]** Improvement of WebView support
 - **[FIX]** Bug fix of mask position error
 - **[FIX]** Serveral other bug fix
-
