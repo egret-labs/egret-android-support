@@ -10,6 +10,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 
 public class HelloEgret extends Activity {
     private static final String EGRET_ROOT = "egret";
@@ -25,6 +27,11 @@ public class HelloEgret extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        
         egretRoot = new File(getFilesDir(), EGRET_ROOT).getAbsolutePath();
         gameId = "local";
         //TODO: DEBUG 使用 2
@@ -32,6 +39,9 @@ public class HelloEgret extends Activity {
         gameEngine = new EgretGameEngine();
         HashMap<String, Object> options = getGameOptions();
         gameEngine.game_engine_set_options(options);
+        
+        gameEngine.game_engine_set_loading_view(new GameLoadingView(this));
+        
         gameEngine.game_engine_init(this);
         View gameEngineView = gameEngine.game_engine_get_view();
         setContentView(gameEngineView);

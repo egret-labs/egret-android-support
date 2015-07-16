@@ -9,6 +9,7 @@
     "rename_tree": {
         "content": [
             "proj.android/src/org/egret/java/HelloEgret/HelloEgret.java",
+	    "proj.android/src/org/egret/java/HelloEgret/GameLoadingView.java",
             "proj.android/AndroidManifest.xml",
             "proj.android/res/values/strings.xml",
             "proj.android/.project"
