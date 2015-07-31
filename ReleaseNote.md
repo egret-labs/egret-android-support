@@ -1,5 +1,14 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 2.0.3 Release Notes
+--
+Update: July, 31 2015
+
+- **[Add]** Texture's releasing and reloading video memory functions. 
+- **[Update]** Optimized Nest module.
+- **[Fix]** Threads synchronyzation related bug.
+- **[Fix]** Image loading anomaly during app resumption. 
+
 ### Egret Android Support 2.0_final Release Notes
 --
 Update: July, 16 2015
