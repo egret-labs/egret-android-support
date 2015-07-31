@@ -1,5 +1,14 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 2.0.3 Release Notes
+--
+更新时间：2015年07月31日
+
+- **[新特性]** 增加纹理显存的释放与重载功能。
+- **[改进]** 改进Nest模块。
+- **[修复]** 修复线程同步相关BUG。
+- **[修复]** 修复app resume时有可能出现图片载入异常的BUG。
+
 ### Egret Android Support 2.0_final Release Notes
 --
 更新时间：2015年07月16日
