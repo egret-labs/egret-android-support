@@ -1,5 +1,15 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 2.0.4 Release Notes
+--
+更新时间：2015年08月13日
+
+- **[新特性]** 增加截图功能。
+- **[新特性]** 支持外设按键事件。
+- **[改进]** 增加稳定性。
+- **[修复]** 修复无法使用自定义字体的BUG。
+- **[修复]** 修复在没有设置字体的情况下，获取字体大小会Crash的BUG。
+
 ### Egret Android Support 2.0.3 Release Notes
 --
 更新时间：2015年07月31日

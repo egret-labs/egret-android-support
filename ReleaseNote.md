@@ -1,5 +1,15 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 2.0.4 Release Notes
+--
+Update: August, 13  2015
+
+- **[Add]** Screenshot.
+- **[Add]** Support the key event of peripheral. 
+- **[Update]** More stable. 
+- **[Fix]**  Unable to use custom font. 
+- **[Fix]** If font is not set, getting font size will lead to crash. 
+
 ### Egret Android Support 2.0.3 Release Notes
 --
 Update: July, 31 2015
