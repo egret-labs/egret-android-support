@@ -1,5 +1,13 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 2.0.5 Release Notes
+--
+Update: August, 27  2015
+
+- **[Update]** More stable. 
+- **[Update]** Removed useless codes.
+- **[Fix]** Other bugs.
+
 ### Egret Android Support 2.0.4 Release Notes
 --
 Update: August, 13  2015
