@@ -1,5 +1,16 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 2.5.0 Release Notes
+--
+更新时间：2015年09月25日
+
+- **[新特性]** 添加对Egret Engine v2.5.0的支持。
+- **[改进]** 增强稳定性。
+- **[改进]** 去掉无用代码。
+- **[改进]** 改进蒙版相关性能。
+- **[修复]** 修复声音相关BUG。
+- **[修复]** 修复蒙版相关BUG。
+
 ### Egret Android Support 2.0.5 Release Notes
 --
 更新时间：2015年08月27日
