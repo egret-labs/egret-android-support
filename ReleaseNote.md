@@ -1,5 +1,13 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 2.5.0 hotfix Release Notes
+--
+Update: September, 30th, 2015
+
+- **[Add]** Added parsing support to XML. 
+- **[Update]** Removed useless codes.
+- **[Fix]** Fixed bugs.
+
 ### Egret Android Support 2.5.0 Release Notes
 --
 Update: September, 25th, 2015

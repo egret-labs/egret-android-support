@@ -1,5 +1,13 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 2.5.0 hotfix Release Notes
+--
+更新时间：2015年09月30日
+
+- **[新特性]** 添加对xml的运行时解析。
+- **[改进]** 去掉无用代码。
+- **[修复]** 修复BUG。
+
 ### Egret Android Support 2.5.0 Release Notes
 --
 更新时间：2015年09月25日
