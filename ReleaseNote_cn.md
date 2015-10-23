@@ -1,5 +1,16 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 2.5.1 Release Notes
+--
+更新时间：2015年10月23日
+
+- **[新特性]** 支持脏矩形。
+- **[新特性]** 添加getPixels接口。
+- **[改进]** 去掉无用代码。
+- **[改进]** 增强稳定性。
+- **[修复]** 修复带描边文字与H5上表现不一致的BUG。
+- **[修复]** 修复Catch as bitmap时有可能出现裁切异常的BUG。
+
 ### Egret Android Support 2.5.0 hotfix Release Notes
 --
 更新时间：2015年09月30日
