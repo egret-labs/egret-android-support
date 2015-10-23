@@ -1,5 +1,16 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 2.5.1 Release Notes
+--
+Update: October 23, 2015
+
+- **[Add]** Dirty rectangle is supported. 
+- **[Add]** Added getPixels.
+- **[Update]** Removed useless codes.
+- **[Update]** Improved stability.
+- **[Fix]** Fixed the display discrepancy of stroke text on runtime and html5.
+- **[Fix]** Fixed the occasional clip anomaly that occurs during catching as bitmap. 
+
 ### Egret Android Support 2.5.0 hotfix Release Notes
 --
 Update: September, 30th, 2015
