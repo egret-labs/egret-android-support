@@ -1,5 +1,17 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 2.5.4 Release Notes
+--
+Update：November 6th, 2015
+
+- **[Update]** Removed useless codes. 
+- **[Update]** Optimized saveToFile,toDataUrl.
+- **[Update]** Improved the stability of dirty rectangle mode.
+- **[Fix]** Matrix related bug in Canvas.
+- **[Fix]** Text display anomaly in Canvas.
+- **[Fix]** Mask related bug under dirty rectangle mode.
+- **[Fix]** Some memory leak problems.
+
 ### Egret Android Support 2.5.1 Release Notes
 --
 Update: October 23, 2015
