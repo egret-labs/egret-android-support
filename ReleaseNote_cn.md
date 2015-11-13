@@ -1,5 +1,12 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 2.5.5 Release Notes
+--
+更新时间：2015年11月13日
+
+- **[改进]** 更改文字渲染方式。
+- **[修复]** 修复BUG。
+
 ### Egret Android Support 2.5.4 Release Notes
 --
 更新时间：2015年11月06日
