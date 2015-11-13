@@ -1,5 +1,11 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 2.5.5 Release Notes
+--
+Update：November 13, 2015
+
+- **[Update]** Modify text render.
+- **[Fix]** Fixed bugs.
 
 ### Egret Android Support 2.5.4 Release Notes
 --
