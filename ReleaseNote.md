@@ -1,5 +1,18 @@
 ##Egret Android Support Release Notes 
 ---
+
+### Egret Android Support 2.5.6 Release Notes
+--
+Update：November 27, 2015
+
+- **[Add]** New sound engine based on OpenSLES.
+- **[Update]** Optimized sound module. 
+- **[Update]** Optimized editbox view。
+- **[Update]** Optimized accurate of circle drawing。
+- **[Update]** Improved stability.
+- **[Fix]** Replace '\t' with the blank character when convert XML to JSON to avoid a JSON paresing error.
+- **[Fix]** Fixed bugs.
+
 ### Egret Android Support 2.5.5 Release Notes
 --
 Update：November 13, 2015
