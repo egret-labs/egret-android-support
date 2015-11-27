@@ -1,11 +1,24 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 2.5.6 Release Notes
+--
+更新时间：2015年11月27日
+
+- **[新特性]** 使用OpenSLES来实现声音模块。
+- **[改进]** 优化声音模块。
+- **[改进]** 文本输入框悬浮在弹出键盘上沿。
+- **[改进]** 提高绘制圆弧的精度。
+- **[改进]** 提高稳定性。
+- **[修复]** XML转换为JSON时，\t转换为一个空格字符。避免JSON解析错误。
+- **[修复]** 修复其它BUG。
+
 ### Egret Android Support 2.5.5 Release Notes
 --
 更新时间：2015年11月13日
 
 - **[改进]** 更改文字渲染方式。
 - **[修复]** 修复BUG。
+
 
 ### Egret Android Support 2.5.4 Release Notes
 --
