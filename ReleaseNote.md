@@ -10,7 +10,7 @@ Update：November 27, 2015
 - **[Update]** Optimized editbox view。
 - **[Update]** Optimized accurate of circle drawing。
 - **[Update]** Improved stability.
-- **[Fix]** Replace '\t' with the blank character when convert XML to JSON to avoid a JSON paresing error.
+- **[Fix]** Replace '\t' with the blank character when converting XML to JSON to avoid a JSON paresing error.
 - **[Fix]** Fixed bugs.
 
 ### Egret Android Support 2.5.5 Release Notes
