@@ -58,7 +58,6 @@ public class HelloEgret extends Activity {
     }
     
     private void setInterfaces() {
-        gameEngine.enableEgretRuntimeInterface();
         // Egret（TypeScript）－Runtime（Java）通讯
         // setRuntimeInterface(String name, IRuntimeInterface interface) 用于设置一个runtime的目标接口
         // callEgretInterface(String name, String message) 用于调用Egret的接口，并传递消息
