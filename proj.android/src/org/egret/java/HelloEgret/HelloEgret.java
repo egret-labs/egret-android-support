@@ -16,7 +16,8 @@ import android.view.WindowManager;
 
 public class HelloEgret extends Activity {
     private interface IRuntimeInterface {
-        public void callBack(String message);
+        public void callback(String message);
+        // 因为遗留问题 callBack 也是接受的
     }
     
     private static final String EGRET_ROOT = "egret";
@@ -63,7 +64,7 @@ public class HelloEgret extends Activity {
         // callEgretInterface(String name, String message) 用于调用Egret的接口，并传递消息
         gameEngine.setRuntimeInterface("RuntimeInterface", new IRuntimeInterface() {
            @Override
-            public void callBack(String message) {
+            public void callback(String message) {
                 Log.d(TAG, message);
                 gameEngine.callEgretInterface("EgretInterface", "A message from runtime");
             }
