@@ -37,13 +37,18 @@ public class HelloEgret extends Activity {
         //TODO: DEBUG 使用 2
         setLoaderUrl(2);
         gameEngine = new EgretGameEngine();
+        // 设置游戏的选项  (set game options)
         HashMap<String, Object> options = getGameOptions();
         gameEngine.game_engine_set_options(options);
-        
+        // 设置加载进度条  (set loading progress bar)
         gameEngine.game_engine_set_loading_view(new GameLoadingView(this));
-        
+        new EgretRuntimePipe();
+        // 创建Egret<->Runtime的通讯 (create pipe between Egret and Runtime)
+        new EgretRuntimePipe().setEgretRuntimePipe(gameEngine);
+        // 初始化并获得渲染视图 (initialize game engine and obtain rendering view)
         gameEngine.game_engine_init(this);
         View gameEngineView = gameEngine.game_engine_get_view();
+
         setContentView(gameEngineView);
     }
 
