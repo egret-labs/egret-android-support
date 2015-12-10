@@ -10,7 +10,6 @@
         "content": [
             "proj.android/src/org/egret/java/HelloEgret/HelloEgret.java",
 	    "proj.android/src/org/egret/java/HelloEgret/GameLoadingView.java",
-	    "proj.android/src/org/egret/java/HelloEgret/EgretRuntimePipe.java",
             "proj.android/AndroidManifest.xml",
             "proj.android/res/values/strings.xml",
             "proj.android/.project"

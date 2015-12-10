@@ -8,15 +8,21 @@ import org.egret.egretframeworknative.engine.EgretGameEngine;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
 public class HelloEgret extends Activity {
+    private interface IRuntimeInterface {
+        public void callBack(String message);
+    }
+    
     private static final String EGRET_ROOT = "egret";
     //TODO: egret publish之后，修改以下常量为生成的game_code名
     private static final String EGRET_PUBLISH_ZIP = "game_code_0123456789.zip";
+    protected static final String TAG = "HelloEgret";
 
     private EgretGameEngine gameEngine;
     private String egretRoot;
@@ -42,14 +48,27 @@ public class HelloEgret extends Activity {
         gameEngine.game_engine_set_options(options);
         // 设置加载进度条  (set loading progress bar)
         gameEngine.game_engine_set_loading_view(new GameLoadingView(this));
-        new EgretRuntimePipe();
         // 创建Egret<->Runtime的通讯 (create pipe between Egret and Runtime)
-        new EgretRuntimePipe().setEgretRuntimePipe(gameEngine);
+        setInterfaces();
         // 初始化并获得渲染视图 (initialize game engine and obtain rendering view)
         gameEngine.game_engine_init(this);
         View gameEngineView = gameEngine.game_engine_get_view();
 
         setContentView(gameEngineView);
+    }
+    
+    private void setInterfaces() {
+        gameEngine.enableEgretRuntimeInterface();
+        // Egret（TypeScript）－Runtime（Java）通讯
+        // setRuntimeInterface(String name, IRuntimeInterface interface) 用于设置一个runtime的目标接口
+        // callEgretInterface(String name, String message) 用于调用Egret的接口，并传递消息
+        gameEngine.setRuntimeInterface("RuntimeInterface", new IRuntimeInterface() {
+           @Override
+            public void callBack(String message) {
+                Log.d(TAG, message);
+                gameEngine.callEgretInterface("EgretInterface", "A message from runtime");
+            }
+        });
     }
 
     private HashMap<String, Object> getGameOptions() {
