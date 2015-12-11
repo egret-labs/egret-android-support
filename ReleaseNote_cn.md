@@ -1,5 +1,15 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 2.5.7 Release Notes
+--
+更新时间：2015年12月11日
+
+- **[新特性]** 对arm64-v8,x86的支持。
+- **[改进]** 使用新版V8。
+- **[改进]** 提高图片加载速度。
+- **[修复]** 修复一些内存溢出的BUG。
+- **[修复]** 修复其它BUG。
+
 ### Egret Android Support 2.5.6 Release Notes
 --
 更新时间：2015年11月27日
