@@ -1,5 +1,18 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 2.5.8 Release Notes
+--
+更新时间：2015年12月31日
+
+- **[改进]** 提高文字渲染精度。
+- **[改进]** 提高稳定性。
+- **[修复]** 修复在android arm64-v8a 架构上的BUG。
+- **[修复]** 修复声音模块的BUG。
+- **[修复]** 修复对Android2.3.5不兼容的问题。
+- **[修复]** 修复JNI相关BUG。
+- **[修复]** 修复文字相关BUG。
+- **[修复]** 修复其它BUG。
+
 ### Egret Android Support 2.5.7 Release Notes
 --
 更新时间：2015年12月11日
