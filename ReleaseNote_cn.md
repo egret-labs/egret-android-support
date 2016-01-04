@@ -1,5 +1,12 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 3.0.0 Release Notes
+--
+更新时间：2016年01月04日
+
+「注意：此版本仅为了匹配Egret Engine 3.0的版本号，还未提供webgl支持。」
+
+
 ### Egret Android Support 2.5.8 Release Notes
 --
 更新时间：2015年12月31日
@@ -12,6 +19,7 @@
 - **[修复]** 修复JNI相关BUG。
 - **[修复]** 修复文字相关BUG。
 - **[修复]** 修复其它BUG。
+
 
 ### Egret Android Support 2.5.7 Release Notes
 --

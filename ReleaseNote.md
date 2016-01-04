@@ -1,5 +1,12 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 3.0.0 Release Notes
+--
+Update：January 04, 2015
+
+「Note:This release is only a match for the version of Egret Engine 3.0, not available for webgl.」
+
+
 ### Egret Android Support 2.5.8 Release Notes
 --
 Update：December 31, 2015
