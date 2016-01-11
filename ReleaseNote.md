@@ -1,8 +1,18 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 3.0.1 Release Notes
+--
+Update：January 11, 2016
+
+- **[Update]** Improved performance of toDataURL.
+- **[Update]** Improved stability.
+- **[Fix]** Some bugs on usage of ArrayBuffer.
+- **[Fix]** Improved performance of rounded rectangle rending.
+- **[Fix]** Fixed bugs.
+
 ### Egret Android Support 3.0.0 Release Notes
 --
-Update：January 04, 2015
+Update：January 04, 2016
 
 「Note:This release is only a match for the version of Egret Engine 3.0, not available for webgl.」
 
