@@ -4,6 +4,15 @@
 --
 Update：January 11, 2016
 
+- **[refactor]** SoundEngine
+- **[Update]** Improved stability.
+- **[Fix]** "to many objects" error on sound engine.
+- **[Fix]** Fixed bugs.
+
+### Egret Android Support 3.0.1 Release Notes
+--
+Update：January 11, 2016
+
 - **[Update]** Improved performance of toDataURL.
 - **[Update]** Improved stability.
 - **[Fix]** Some bugs on usage of ArrayBuffer.

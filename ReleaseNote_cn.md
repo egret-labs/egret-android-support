@@ -1,8 +1,19 @@
 ##Egret Android Support Release Notes 
 ---
+
+### Egret Android Support 3.0.2 Release Notes
+--
+更新时间：2016年01月25日
+
+- **[重构]** 重构声音模块。
+- **[改进]** 提高稳定性。
+- **[修复]** 修复声音模块“to many object”的问题。
+- **[修复]** 修复其它BUG。
+
 ### Egret Android Support 3.0.1 Release Notes
 --
 更新时间：2016年01月11日
+
 - **[改进]** 提高toDataURL处理速度。
 - **[改进]** 提高稳定性。
 - **[修复]** 修复ArrayBuffer相关BUG。
