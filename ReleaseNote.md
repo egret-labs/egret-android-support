@@ -1,8 +1,17 @@
 ##Egret Android Support Release Notes 
 ---
-### Egret Android Support 3.0.1 Release Notes
+### Egret Android Support 3.0.3 Release Notes
 --
-Update：January 11, 2016
+Update：February 22, 2016
+
+- **[Update]** Improved stability.
+- **[Fix]** bugs on setTimeOut.
+- **[Fix]** bugs on font stoke.
+- **[Fix]** error on mask used with sharp.
+
+### Egret Android Support 3.0.2 Release Notes
+--
+Update：January 25, 2016
 
 - **[refactor]** SoundEngine
 - **[Update]** Improved stability.

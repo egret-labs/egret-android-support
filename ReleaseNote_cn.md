@@ -1,5 +1,13 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 3.0.3 Release Notes
+--
+更新时间：2016年02月22日
+
+- **[改进]** 提高稳定性。
+- **[修复]** 修复setTimeOut功能的相关BUG。
+- **[修复]** 修复字体描边功能相关BUG。
+- **[修复]** 修复用shape作为mask时显示异常的BUG。
 
 ### Egret Android Support 3.0.2 Release Notes
 --
