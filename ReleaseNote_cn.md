@@ -1,6 +1,6 @@
 ##Egret Android Support Release Notes 
 ---
-### Egret Android Support 3.0.3 Release Notes
+### Egret Android Support 3.0.4 Release Notes
 --
 更新时间：2016年03月9日
 
