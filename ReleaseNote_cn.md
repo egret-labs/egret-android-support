@@ -2,6 +2,13 @@
 ---
 ### Egret Android Support 3.0.3 Release Notes
 --
+更新时间：2016年03月9日
+
+- **[改进]** 提高稳定性。
+- **[改进]** 字体性能提升。
+- **[修复]** 修复HTTP回调相关BUG。
+- **[修复]** 修复cacheAsBitmap有可能Crash的BUG。
+
 更新时间：2016年02月22日
 
 - **[改进]** 提高稳定性。
@@ -100,7 +107,7 @@
 - **[改进]** 去掉无用代码。
 - **[改进]** 增强稳定性。
 - **[修复]** 修复带描边文字与H5上表现不一致的BUG。
-- **[修复]** 修复Catch as bitmap时有可能出现裁切异常的BUG。
+- **[修复]** 修复Catche as bitmap时有可能出现裁切异常的BUG。
 
 ### Egret Android Support 2.5.0 hotfix Release Notes
 --

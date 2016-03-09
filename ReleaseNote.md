@@ -2,6 +2,13 @@
 ---
 ### Egret Android Support 3.0.3 Release Notes
 --
+Update：March 09, 2016
+
+- **[Update]** Improved stability.
+- **[Update]** Improved performance of font rendering.
+- **[Fix]** bugs on HTTP callback.
+- **[Fix]** bugs on usage of cacheAsBitmap.
+
 Update：February 22, 2016
 
 - **[Update]** Improved stability.
