@@ -1,5 +1,16 @@
 ##Egret Android Support Release Notes 
 ---
+
+### Egret Android Support 3.0.5 Release Notes
+--
+Update：March 22, 2016
+
+- **[Update]** Improved stability.
+- **[Update]** Improved accuracy of Bezier rending.
+- **[Fix]**  bugs on usage of  Mask .
+- **[Fix]** irregular exceptions throwing .
+- **[Fix]** Fixed bugs.
+
 ### Egret Android Support 3.0.4 Release Notes
 --
 Update：March 09, 2016
@@ -9,6 +20,8 @@ Update：March 09, 2016
 - **[Fix]** bugs on HTTP callback.
 - **[Fix]** bugs on usage of cacheAsBitmap.
 
+### Egret Android Support 3.0.3 Release Notes
+--
 Update：February 22, 2016
 
 - **[Update]** Improved stability.

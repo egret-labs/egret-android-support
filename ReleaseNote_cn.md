@@ -1,5 +1,15 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 3.0.5 Release Notes
+--
+更新时间：2016年03月22日
+
+- **[改进]** 提高稳定性。
+- **[改进]** 提高Besier曲线绘制精度。
+- **[修复]** 修复Mask相关BUG。
+- **[修复]** 修复onPromise非正常抛错。
+- **[修复]** 修复其它BUG。
+
 ### Egret Android Support 3.0.4 Release Notes
 --
 更新时间：2016年03月9日
@@ -9,6 +19,17 @@
 - **[修复]** 修复HTTP回调相关BUG。
 - **[修复]** 修复cacheAsBitmap有可能Crash的BUG。
 
+### Egret Android Support 3.0.4 Release Notes
+--
+更新时间：2016年03月9日
+
+- **[改进]** 提高稳定性。
+- **[改进]** 字体性能提升。
+- **[修复]** 修复HTTP回调相关BUG。
+- **[修复]** 修复cacheAsBitmap有可能Crash的BUG。
+
+### Egret Android Support 3.0.3 Release Notes
+--
 更新时间：2016年02月22日
 
 - **[改进]** 提高稳定性。
