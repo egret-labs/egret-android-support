@@ -1,5 +1,14 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 3.0.6 Release Notes
+--
+更新时间：2016年04月05日
+
+- **[新特性]** GameOption里增加背景色`OPTION_GAME_BACKGROUND`的选项。
+- **[改进]** 提高稳定性。
+- **[改进]** 矢量绘图画线stroke的抗锯齿。
+- **[修复]** 修复其它BUG
+
 ### Egret Android Support 3.0.5 Release Notes
 --
 更新时间：2016年03月22日
