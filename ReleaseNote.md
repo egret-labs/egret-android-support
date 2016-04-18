@@ -1,5 +1,13 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 3.0.7 Release Notes
+--
+Update：April 18, 2016
+
+- **[Update]** Improve render performance of Texture related.
+- **[Update]** Improved stability.
+- **[Fix]** Fixed bugs.
+
 ### Egret Android Support 3.0.5 Release Notes
 --
 Update：March 22, 2016

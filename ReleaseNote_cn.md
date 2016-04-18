@@ -1,5 +1,13 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 3.0.7 Release Notes
+--
+更新时间：2016年04月18日
+
+- **[改进]** 渲染模块纹理相关的性能提升。
+- **[改进]** 提高稳定性。
+- **[修复]** 修复其它BUG
+
 ### Egret Android Support 3.0.5 Release Notes
 --
 更新时间：2016年03月22日
