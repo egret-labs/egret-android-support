@@ -1,14 +1,20 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 3.0.7 Release Notes
+--
+Update：April 18, 2016
+
+- **[Update]** Improve render performance of Texture related.
+- **[Update]** Improved stability.
+- **[Fix]** Fixed bugs.
+
 ### Egret Android Support 3.0.6 Release Notes
 --
 Update：April 05, 2016
 
-- **[Update]** Update anti-aliasing feature in stroke line. 
-- **[Update]** Improved stability.
-- **[Add]** Add new protocol declare in ProgressViewDelegate. 
 - **[Add]** Add `OPTION_GAME_BACKGROUND` of GameOption.
-- **[Fix]** Fixed bugs.
+- **[Update]** Improved stability.
+- **[Update]** Update anti-aliasing feature in stroke line. 
 
 ### Egret Android Support 3.0.5 Release Notes
 --
