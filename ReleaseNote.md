@@ -1,5 +1,15 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 3.0.8 Release Notes
+--
+Update：May 04, 2016
+
+- **[Update]** Improve render performance of Font related.
+- **[Update]** Improved stability.
+- **[Fix]** Fixed rendering error when a object is cached as bitmap.
+- **[Fix]** Crash fix for no texture data.
+- **[Fix]** Fixed bugs.
+
 ### Egret Android Support 3.0.7 Release Notes
 --
 Update：April 18, 2016
