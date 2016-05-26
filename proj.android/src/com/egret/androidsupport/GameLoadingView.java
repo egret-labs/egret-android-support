@@ -1,4 +1,4 @@
-package org.egret.java.HelloEgret;
+package com.egret.androidsupport;
 
 import android.content.Context;
 import android.widget.FrameLayout;
