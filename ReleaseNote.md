@@ -1,5 +1,14 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 3.1.1 Release Notes
+--
+Update：May 31, 2016
+
+- **[Add]** support Video playback.
+- **[Update]** Improved stability.
+- **[Fix]** Fixed sound bugs on android 6.0.
+- **[Fix]** Fixed bugs.
+
 ### Egret Android Support 3.1.0 Release Notes
 --
 Update：May 17, 2016

@@ -1,5 +1,14 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 3.1.1 Release Notes
+--
+更新时间：2016年05月31日
+
+- **[新特性]** 支持 Video 播放。
+- **[改进]** 提高稳定性。
+- **[修复]** 修复声音模块在android 6.0上的一些BUG。
+- **[修复]** 修复其它BUG
+
 ### Egret Android Support 3.1.0 Release Notes
 --
 更新时间：2016年05月17日
