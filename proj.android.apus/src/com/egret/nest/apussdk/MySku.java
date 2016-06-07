@@ -34,7 +34,6 @@ public class MySku implements Sku{
     	this.name = productName;
     	this.description = description;
     	String priceStr = price;
-    	priceStr = "0.01";
         int start = priceStr.lastIndexOf(currencyCode);
         if(start>=0){
         	start+=currencyCode.length();
