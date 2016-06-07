@@ -1,0 +1,107 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.egret.gameofpower.apus"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="21" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- extra for apus sdk -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <!-- APUS SDK ENTRANCE -->
+        	<activity
+	            android:screenOrientation="portrait"
+	            android:name=".MainActivity"
+                android:label="@string/app_name" 
+	         	android:theme="@android:style/Theme.NoTitleBar.Fullscreen" 
+	         	android:configChanges="orientation|keyboardHidden|keyboard|screenLayout|screenSize">
+	            <intent-filter>
+	                <action android:name="android.intent.action.MAIN" />
+	                <category android:name="android.intent.category.LAUNCHER" />
+	            </intent-filter>
+	        </activity>
+		<!-- END APUS SDK ENTRANCE -->
+        <!-- Apus Play Login and Payment Activities -->
+	        <activity
+	            android:name="com.apusapps.sdk.im.activity.ApusLoginActivity"
+	            android:configChanges="keyboard|keyboardHidden|orientation"
+	            android:screenOrientation="portrait" />
+	        <activity
+	            android:name="com.apusapps.sdk.im.activity.ApusSdkLoginActivity"
+	            android:configChanges="keyboard|keyboardHidden|orientation"
+	            android:screenOrientation="portrait" >
+	        </activity>
+	        <activity
+	            android:name="com.apusapps.sdk.im.activity.ApusSdkRegActivity"
+	            android:configChanges="keyboard|keyboardHidden|orientation"
+	            android:screenOrientation="portrait" >
+	        </activity>
+	        <activity
+	            android:name="com.apusplay.sdk.pay.ApusPayActivity"
+	            android:configChanges="keyboard|keyboardHidden|orientation|screenSize" >
+	        </activity>
+        <!-- End Apus Play Login and Payment Activities!  -->
+        
+        <!-- facebook登陆配置 -->
+	        <activity
+	            android:name="com.facebook.FacebookActivity"
+	            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+	            android:label="@string/app_name"
+	            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+	        <meta-data
+	            android:name="com.facebook.sdk.ApplicationId"
+	            android:value="@string/facebook_app_id"/>
+	        <!-- 1545041189133421 for Facebook production -->
+   			<!-- 1545042152466658 for Facebook test -->
+        		<!-- 注意将下面换成你自己申请的facebookid -->
+	        <provider
+	            android:name="com.facebook.FacebookContentProvider"
+	            android:authorities="com.facebook.app.FacebookContentProvider1545042152466658"
+	            android:exported="true"/>
+        <!-- END facebook登陆配置 -->
+        
+        <!--      Google play service, Google+ required info -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" /> 
+
+        <!-- End of Apus Play SDK required components -->
+        
+        <!-- GCM相关组件 -->
+	        <!--注意需要将该provider中属性android:authorities中的com.apusplay.sdkdemo.message.db中包名的前缀部分
+	     		com.apusplay.sdkdemo换成应用自己的package, 以免跟其他应用发生冲突
+	        -->
+	        <provider
+	            android:name="com.apusapps.gcm.component.DbProvider"
+	            android:authorities="com.egret.gameofpower.apus.message.db"
+	            android:exported="false" />
+	        <receiver
+	            android:name="com.apusapp.gcm.component.NetworkStateReceiver">
+	            <intent-filter>
+	                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+	            </intent-filter>
+	        </receiver>
+        <!-- END GCM相关组件 -->
+    </application>
+</manifest>

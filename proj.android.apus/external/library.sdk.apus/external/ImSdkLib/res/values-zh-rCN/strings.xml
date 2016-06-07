@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="login_google">使用Google+登录</string>
+    <string name="login_facebook">使用facebook登录</string>
+    
+    <string name="apus_reg_name">账号(邮箱)</string>
+    <string name="apus_reg_nick">昵称</string>
+    <string name="apus_reg_pwd">密码</string>
+    <string name="apus_reg_pwd2">确认密码</string>
+    <string name="apus_reg_name_err">账号必须是邮箱并且不能为空, 仅限3&#8211;64个字符</string>
+    <string name="apus_reg_nick_err">昵称不能为空, 仅限3&#8211;64 个字符</string>
+    <string name="apus_reg_pwd_err">密码不能为空, 仅限6&#8211;32 个字符</string>
+    <string name="apus_reg_pwd2_err">确认密码必须和密码一致</string>
+    <string name="apus_reg_succ">注册成功</string>
+    <string name="apus_reg_fail">注册失败</string>
+    <string name="apus_login_name">账号</string>
+    <string name="apus_login_pwd">密码</string>
+    <string name="apus_login_succ">登录成功</string>
+    <string name="apus_login_fail">登录失败</string>
+    <!-- <string name="apus_login">Login</string> -->
+    <string name="apus_reg">注册</string>
+    <string name="apus_reg_apus">Apus注册 </string>
+
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="im_facebook_blue">#3e5e97</color>
+    <color name="text_dark">#444444</color>
+    <color name="text_alpha_black">#80444444</color>
+    <color name="purple">#6c67de</color>
+    <color name="ten_percent_black">#19000000</color>
+
+</resources>

@@ -1,0 +1,13 @@
+user_host1=http://test.accounts.apusplay.com/v1/
+user_host2=http://test.accounts.apusplay.com/v1/
+message_host1=http://message1.api.apusapps.com/v1/
+message_host2=http://message2.api.apusapps.com/v1/
+relation_host1=http://friend1.api.apusapps.com/v1/
+relation_host2=http://friend2.api.apusapps.com/v1/
+upload_host1=http://upload1.api.apusapps.com/v1/
+upload_host2=http://upload2.api.apusapps.com/v1/
+upload_path=/user/pic
+# For upgrade
+upgrade.url.host1=up1.api.apusapps.com
+upgrade.url.host2=up2.api.apusapps.com
+upgrade.url.path=/api/v1

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="login_google">Google+ के साथ लॉग इन करें</string>
+    <string name="login_facebook">Facebook के साथ लॉग इन करें</string>
+
+</resources>

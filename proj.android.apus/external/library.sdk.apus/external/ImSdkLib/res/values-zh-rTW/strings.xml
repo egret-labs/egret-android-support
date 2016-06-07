@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="login_google">使用Google+登錄</string>
+    <string name="login_facebook">使用facebook登錄</string>
+
+    <string name="apus_reg_name">賬號(郵箱)</string>
+    <string name="apus_reg_nick">昵稱</string>
+    <string name="apus_reg_pwd">密碼</string>
+    <string name="apus_reg_pwd2">確認密碼</string>
+    <string name="apus_reg_name_err">賬號必須是郵箱並且不能為空, 僅限3&#8211;64個字符</string>
+    <string name="apus_reg_nick_err">昵稱不能為空, 僅限3&#8211;64 個字符</string>
+    <string name="apus_reg_pwd_err">密碼不能為空, 僅限6&#8211;32 個字符</string>
+    <string name="apus_reg_pwd2_err">確認密碼必須和密碼壹致</string>
+    <string name="apus_reg_succ">註冊成功</string>
+    <string name="apus_reg_fail">註冊失敗</string>
+    <string name="apus_login_name">賬號</string>
+    <string name="apus_login_pwd">密碼</string>
+    <string name="apus_login_succ">登錄成功</string>
+    <string name="apus_login_fail">登錄失敗</string>
+    <!-- <string name="apus_login">Login</string> -->
+    <string name="apus_reg">註冊</string>
+    <string name="apus_reg_apus">Apus註冊 </string>
+</resources>

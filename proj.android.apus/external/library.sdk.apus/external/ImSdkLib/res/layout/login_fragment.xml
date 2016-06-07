@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <com.apusapps.sdk.im.fragment.MyLoginButton
+        android:id="@+id/facebook_login_button"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="@drawable/selector_btn_facebook"
+        android:drawableLeft="@drawable/facebook"
+        android:gravity="center"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:singleLine="true"
+        android:text="@string/login_facebook"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/g_plus_sign_in_button"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="@drawable/selector_btn_google_plus"
+        android:drawableLeft="@drawable/google"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:singleLine="true"
+        android:layout_marginTop="16dp"
+        android:text="@string/login_google"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btn_apus_login"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="@drawable/selector_btn_apus"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:layout_marginTop="16dp"
+        android:singleLine="true"
+        android:text="@string/login_apus"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+
+</LinearLayout>

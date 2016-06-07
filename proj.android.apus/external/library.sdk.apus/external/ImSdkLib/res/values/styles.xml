@@ -1,0 +1,44 @@
+<resources>
+
+    <style name="im_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item> <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item> <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">false</item> <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item> <!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item> <!-- 背景透明 -->
+    </style>
+    
+    <!-- <style name="SettingsTheme" parent="android:Theme.Holo.Light.NoActionBar">
+        <item name="android:windowBackground">#f4f4f4</item>
+        <item name="android:windowAnimationStyle">@style/CommonAnimationStyle</item>
+        <item name="android:windowNoTitle">true</item>
+    </style> -->
+
+    
+    <style name="button_base">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+    
+    <!-- <style name="button_white_bg" parent="button_base">
+        <item name="android:background">@drawable/selector_back_bg</item>
+        <item name="android:textColor">@drawable/selector_feedback_title_send_btn_text</item>
+    </style> -->
+    
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+    </style>
+    
+</resources>

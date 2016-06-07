@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="login_google">Connectez-vous avec Google+</string>
+    <string name="login_facebook">Connectez-vous avec facebook</string>
+
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="login_google">Google+ ile oturum aç</string>
+    <string name="login_facebook">facebook ile oturum aç</string>
+
+</resources>

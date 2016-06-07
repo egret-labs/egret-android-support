@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CommonEditText">
+        <attr name="hint" format="string" />
+        <attr name="singleLine" format="boolean" />
+        <attr name="inputType">
+            <enum name="none" value="0" />
+            <enum name="textEmailAddress" value="0x00000021" />
+            <enum name="textPassword" value="0x00000081" />
+            
+        </attr>
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="login_google">Google+ 계정으로 로그인...</string>
+    <string name="login_facebook">Facebook 계정으로 로그인...</string>
+
+</resources>

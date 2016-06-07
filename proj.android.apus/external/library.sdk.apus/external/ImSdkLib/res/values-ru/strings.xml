@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="login_google">Вход с помощью Google+</string>
+    <string name="login_facebook">Вход с facebook</string>
+
+</resources>

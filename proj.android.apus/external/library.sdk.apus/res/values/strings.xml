@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="app_name">ApusPlaySdkLib</string>
+    
+    <!-- This part is for SDK, would be delivered together with ApusPlaySdklib  -->
+    <string name="apusplay_loading">Loading...</string>
+    <string name="apusplay_press_back_again">Press Back key again to quit processing...</string>
+
+</resources>

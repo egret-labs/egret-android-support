@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:launcher="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+    android:id="@+id/titlebar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <!-- android:background="@drawable/selector_back_bg" -->
+
+        <LinearLayout
+            android:id="@+id/back"
+            android:layout_width="48dip"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/back_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back"
+                android:tint="#6c67de" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:paddingLeft="5dip"
+            android:singleLine="true"
+            android:text="@string/login_apus"
+            android:textColor="#cc444444"
+            android:textSize="20sp" />
+
+        <FrameLayout
+            android:id="@+id/right_btn_layout1"
+            android:layout_width="48dip"
+            android:layout_height="fill_parent"
+            android:visibility="invisible" >
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/title_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#19444444"
+        android:orientation="horizontal" />
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical" >
+
+        <com.apusapps.usercenter.ui.CommonEditText
+            android:id="@+id/et_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            launcher:hint="@string/apus_login_name" />
+
+        <com.apusapps.usercenter.ui.CommonEditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            launcher:hint="@string/apus_login_pwd"
+            launcher:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/tv_reg"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:textSize="14sp"
+            android:layout_gravity="right"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip"
+            android:background="@null"
+            android:textColor="@color/purple"
+            android:text="@string/apus_reg_apus" />
+
+        <Button
+            android:id="@+id/btn_apus_login"
+            android:layout_width="match_parent"
+            android:layout_height="48dip"
+            android:background="@drawable/selector_btn_apus"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip"
+            android:singleLine="true"
+            android:text="@string/login_apus"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

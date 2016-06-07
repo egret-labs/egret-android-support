@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="login_google">ล็อกอินด้วย Google+</string>
+    <string name="login_facebook">ล็อกอินด้วย facebook</string>
+
+</resources>

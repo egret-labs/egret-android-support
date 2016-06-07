@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="login_google">ورود با Google+</string>
+    <string name="login_facebook">ورود با facebook</string>
+
+</resources>

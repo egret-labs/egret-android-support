@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="login_google">Log in with Google+</string>
+    <string name="login_facebook">Log in with facebook</string>
+    <string name="login_apus">Login</string>
+    <string name="btn_reg_apus">Register</string>
+	<string name="reg_apus">Register Apus</string>
+	
+	        <!-- do not translate  Google+ -->
+    <string name="register_via_google">Log in with Google+...</string>
+    <!-- do not translate  Google+ -->
+    <string name="register_via_google_waiting">Waiting Google+...</string>
+    <!-- do not translate  facebook -->
+    <string name="register_via_facebook">Log in with facebook...</string>
+    <string name="register_fail">Login failed, please try again later.</string>
+    
+    
+    <string name="apus_reg_name">Account(email)</string>
+    <string name="apus_reg_nick">Nick name</string>
+    <string name="apus_reg_pwd">Password</string>
+    <string name="apus_reg_pwd2">Confirm password</string>
+
+    <string name="apus_reg_name_err">Account must be email and not null, 3&#8211;64 characters</string>
+    <string name="apus_reg_nick_err">Nick name must be not null, 3&#8211;64 characters</string>
+    <string name="apus_reg_pwd_err">Password must be not null, 6&#8211;32 characters</string>
+    <string name="apus_reg_pwd2_err">Confirm password must be the same as Password</string>
+    <string name="apus_reg_succ">Register Successful</string>
+    <string name="apus_reg_fail">Register Failured</string>
+
+    <string name="apus_login_name">Account</string>
+    <string name="apus_login_pwd">Password</string>
+	<string name="apus_login_succ">Login Successful</string>
+	<string name="apus_login_fail">Login Failured </string>
+    <!--<string name="apus_login">Login</string>-->
+    <string name="apus_reg">Register</string>
+    <string name="apus_reg_apus">Register Apus</string>
+</resources>
