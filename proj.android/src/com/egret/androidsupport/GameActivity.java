@@ -118,6 +118,12 @@ public class GameActivity extends Activity {
     }
 
     @Override
+    public void onDestroy(){
+        super.onDestroy();
+        mGameEngine.game_engine_onStop();
+    }
+    
+    @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         switch (keyCode) {
         case KeyEvent.KEYCODE_BACK:
