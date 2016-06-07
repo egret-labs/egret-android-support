@@ -87,7 +87,7 @@ public class NestPayImpl{
 						mOrderParam.getString("goodsId"),
 						mOrderParam.getString("egretOrderId"),
 						mOrderParam.getString("ext"),//透传数据可空
-						"http://123.57.70.115:8089/",//异步通知地址可空
+						Constants.notifyUrl,//异步通知地址可空
 						1,//个数 
 						"game"//游戏内支付
 					);
