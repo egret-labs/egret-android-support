@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string name="channel_type">0</string>
+    <string name="quicksdk_channel_name">undefined</string>
+    <string name="quicksdk_server_ip_config">http://serverip.sdk.quicksdk.net</string>
+
+    <string-array name="quick_server_config">
+    	<item>http://sdkapi00.sdk.quicksdk.net</item>
+    	<item>http://118.192.80.204</item>
+    </string-array>
+    
+</resources>
