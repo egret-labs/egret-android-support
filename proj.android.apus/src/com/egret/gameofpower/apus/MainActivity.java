@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.egret.egretframeworknative.engine.EgretGameEngine;
-import org.egret.java.library_game.library_game;
 
 import android.util.Log;
 
@@ -22,7 +21,7 @@ import com.apusplay.sdk.UserProfile;
 import com.apusplay.sdk.auth.AuthCallBack;
 import com.apusplay.sdk.exception.ValidationException;
 
-public class MainActivity extends library_game {
+public class MainActivity extends com.egret.androidsupport.GameActivity {
     protected static final String TAG = MainActivity.class.toString();
 	Map properties;
 	EgretGameEngine mGameEngine;

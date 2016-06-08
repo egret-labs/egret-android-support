@@ -3,7 +3,6 @@ package com.egret.gameofpower.quicksdk;
 import java.util.HashMap;
 
 import org.egret.egretframeworknative.engine.EgretGameEngine;
-import org.egret.java.library_game.library_game;
 
 import com.egret.nest.quicksdk.NestAppImpl;
 import com.egret.nest.quicksdk.NestLoginImpl;
@@ -20,7 +19,7 @@ import android.content.Intent;
 import android.util.Log;
 import android.view.KeyEvent;
 
-public class MainActivity extends library_game {
+public class MainActivity extends com.egret.androidsupport.GameActivity {
 	
 	@Override
 	protected void onCreateEgretGameEngine(EgretGameEngine gameEngine) {
@@ -104,7 +103,7 @@ public class MainActivity extends library_game {
 		super.onStop();
 		com.quicksdk.Sdk.getInstance().onStop(this);
 	}
-
+	
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
