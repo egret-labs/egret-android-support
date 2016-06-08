@@ -106,19 +106,19 @@ public class GameActivity extends Activity {
     
 
     @Override
-    public void onPause() {
+    protected void onPause() {
         super.onPause();
         mGameEngine.game_engine_onPause();
     }
 
     @Override
-    public void onResume() {
+    protected void onResume() {
         super.onResume();
         mGameEngine.game_engine_onResume();
     }
 
     @Override
-    public void onDestroy(){
+    protected void onDestroy(){
         super.onDestroy();
         mGameEngine.game_engine_onStop();
     }
