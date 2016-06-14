@@ -1,5 +1,13 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 3.1.2 Release Notes
+--
+更新时间：2016年06月14日
+
+- **[改进]** 新的文本输入方式。
+- **[改进]** 提高稳定性。
+- **[修复]** 修复其它BUG
+
 ### Egret Android Support 3.1.1 Release Notes
 --
 更新时间：2016年05月31日

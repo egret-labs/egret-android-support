@@ -1,5 +1,13 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 3.1.2 Release Notes
+--
+Update：June 14, 2016
+
+- **[Update]** Best experience of text input.
+- **[Update]** Improved stability.
+- **[Fix]** Fixed bugs.
+
 ### Egret Android Support 3.1.1 Release Notes
 --
 Update：May 31, 2016
