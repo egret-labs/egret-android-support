@@ -10,6 +10,7 @@ import android.app.Activity;
 import android.util.Log;
 
 import com.egret.androidsupport.quicksdk.Util;
+import com.quicksdk.Extend;
 import com.quicksdk.User;
 import com.quicksdk.entity.UserInfo;
 import com.quicksdk.notifier.LoginNotifier;
@@ -202,6 +203,7 @@ public class NestLoginImpl{
 					param.put("uid",userInfo.getUID());
 					param.put("token", userInfo.getToken());
 					param.put("channelToken", userInfo.getChannelToken());
+					param.put("channelType", Extend.getInstance().getChannelType());
 				} catch (JSONException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
