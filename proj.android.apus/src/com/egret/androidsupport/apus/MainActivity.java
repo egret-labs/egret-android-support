@@ -1,4 +1,4 @@
-package com.egret.gameofpower.apus;
+package com.egret.androidsupport.apus;
 
 import java.util.HashMap;
 import java.util.Map;

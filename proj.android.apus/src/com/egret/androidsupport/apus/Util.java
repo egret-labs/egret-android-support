@@ -1,4 +1,4 @@
-package com.egret.gameofpower.apus;
+package com.egret.androidsupport.apus;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

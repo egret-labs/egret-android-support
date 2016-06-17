@@ -185,6 +185,10 @@ public class NestLoginImpl{
 						param.put("spLogin","1"); //渠道登录标识。默认1
 						param.put("userId",userInfo.getId()); //玩家在渠道上的用户id(必须)
 						param.put("appKey",appKey); //应用秘钥,RuntimeConfiguration.java中 
+						param.put("userImg", userInfo.getAvatar());
+						param.put("userName", userInfo.getNickName());
+						param.put("userSex", userInfo.getGender());
+						param.put("accessToken", userInfo.getToken()); 
 						//QuickSDK数据
 	//					param.put("userName", userInfo.getUserName());
 	//					param.put("uid",userInfo.getUID());

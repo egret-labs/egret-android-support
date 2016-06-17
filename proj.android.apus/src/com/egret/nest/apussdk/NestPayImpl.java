@@ -28,8 +28,7 @@ import com.apusplay.sdk.pay.PayResult;
 import com.apusplay.sdk.pay.Purchase;
 import com.apusplay.sdk.pay.Sku;
 import com.apusplay.sdk.pay.SkuHolder;
-import com.egret.gameofpower.apus.Constants;
-
+import com.egret.androidsupport.apus.Constants;
 
 /**
  * 功能描述:支付系统

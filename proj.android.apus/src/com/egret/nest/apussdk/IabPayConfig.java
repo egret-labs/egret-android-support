@@ -2,7 +2,7 @@ package com.egret.nest.apussdk;
 
 import com.apusplay.sdk.SdkConstants;
 import com.apusplay.sdk.pay.PayConfig;
-import com.egret.gameofpower.apus.Constants;
+import com.egret.androidsupport.apus.Constants;
 
 /**
  * This GiaPayConfig is a demo for Google In-app Billing.
