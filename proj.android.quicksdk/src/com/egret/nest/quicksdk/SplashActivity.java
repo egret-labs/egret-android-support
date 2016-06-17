@@ -3,7 +3,7 @@ package com.egret.nest.quicksdk;
 import android.content.Intent;
 import android.graphics.Color;
 
-import com.egret.gameofpower.quicksdk.MainActivity;
+import com.egret.androidsupport.quicksdk.MainActivity;
 import com.quicksdk.QuickSdkSplashActivity;
 
 public class SplashActivity extends QuickSdkSplashActivity {

@@ -1,4 +1,4 @@
-package com.egret.gameofpower.quicksdk;
+package com.egret.androidsupport.quicksdk;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

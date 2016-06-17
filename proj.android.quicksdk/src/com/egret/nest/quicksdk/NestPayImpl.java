@@ -11,7 +11,7 @@ import org.json.JSONObject;
 import android.app.Activity;
 import android.util.Log;
 
-import com.egret.gameofpower.quicksdk.Util;
+import com.egret.androidsupport.quicksdk.Util;
 import com.quicksdk.entity.GameRoleInfo;
 import com.quicksdk.entity.OrderInfo;
 import com.quicksdk.notifier.PayNotifier;

@@ -1,4 +1,4 @@
-package com.egret.gameofpower.quicksdk;
+package com.egret.androidsupport.quicksdk;
 
 import java.util.HashMap;
 

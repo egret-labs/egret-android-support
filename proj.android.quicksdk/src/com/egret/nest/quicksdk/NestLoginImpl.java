@@ -9,7 +9,7 @@ import org.json.JSONObject;
 import android.app.Activity;
 import android.util.Log;
 
-import com.egret.gameofpower.quicksdk.Util;
+import com.egret.androidsupport.quicksdk.Util;
 import com.quicksdk.User;
 import com.quicksdk.entity.UserInfo;
 import com.quicksdk.notifier.LoginNotifier;

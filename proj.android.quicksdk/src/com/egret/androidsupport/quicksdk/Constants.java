@@ -1,4 +1,4 @@
-package com.egret.gameofpower.quicksdk;
+package com.egret.androidsupport.quicksdk;
 
 public class Constants {
   	public static final boolean isLandscape = false;
