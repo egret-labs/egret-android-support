@@ -94,7 +94,7 @@
 	        -->
 	        <provider
 	            android:name="com.apusapps.gcm.component.DbProvider"
-	            android:authorities="com.egret.gameofpower.apus.message.db"
+	            android:authorities="com.egret.androidsupport.apus.message.db"
 	            android:exported="false" />
 	        <receiver
 	            android:name="com.apusapp.gcm.component.NetworkStateReceiver">
