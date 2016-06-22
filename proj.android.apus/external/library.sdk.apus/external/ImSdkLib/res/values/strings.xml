@@ -35,4 +35,6 @@
     <!--<string name="apus_login">Login</string>-->
     <string name="apus_reg">Register</string>
     <string name="apus_reg_apus">Register Apus</string>
+    
+    <string name="apus_loading">loading...</string>
 </resources>

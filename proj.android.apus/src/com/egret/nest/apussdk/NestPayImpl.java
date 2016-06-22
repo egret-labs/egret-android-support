@@ -115,7 +115,7 @@ public class NestPayImpl{
 		@Override
 		public void fulfillInventory(Inventory inv) {
 			// TODO Auto-generated method stub
-			if(getPayConfig().getPayType().equalsIgnoreCase(SdkConstants.PAY_TYPE_GOOGLE_IAB)){
+			if(ApusPlaySdk.getInstance().getConfig().isGoogleIab()){
 				// GOOGLE IAB mode
 				// The inventory retrieved from Google Play
 				// No need further handling
@@ -217,12 +217,12 @@ public class NestPayImpl{
 	        // Obtain IabPay instance
 	        //
 	        // 1. prepare PayConfig object
-	        PayConfig payConfig = getPayConfig();
+//	        PayConfig payConfig = getPayConfig();
 	        
 	        // 2. obtain the instance in either way
 	        //    a. ApusPlaySdk.getInstance().getPayable(payConfig);
 	        //    b. PayManager.getPayable(payConfig);
-	        iabPay = (IabPay) ApusPlaySdk.getInstance().getPayable(payConfig);
+	        iabPay = (IabPay) ApusPlaySdk.getInstance().getPayable();
 
 	        // 3. Initialize the pay instance. 
 	        // Prepare SKU id list 
@@ -279,79 +279,22 @@ public class NestPayImpl{
 	}
 	
 	//支付配置 初始化的前提
-	PayConfig payConfig=null;
-    private PayConfig getPayConfig() {
-		if(payConfig==null){
-			// Not prepared yet, construct one
-			// construct pay config according to the APK version
-			// - For Google IAB, the getPayType() returns SdkConstants.PAY_TYPE_GOOGLE_IAB
-			// - For Default pay gateway, the getPayType() returns SdkConstants.PAY_TYPE_GATEWAY
-			payConfig = new IabPayConfig();
-			if(ApusPlaySdk.getInstance().getConfig().isGoogleIab()){
-				((IabPayConfig)payConfig).setPayType(SdkConstants.PAY_TYPE_GOOGLE_IAB);
-			}else{
-				((IabPayConfig)payConfig).setPayType(SdkConstants.PAY_TYPE_GENERAL_GATEWAY);
-			}
-//			payConfig = new PayConfig(){
-//				private static final long serialVersionUID = 2744783582674594255L;
-//				/**
-//				 * The pay type value 
-//				 * 	SdkConstants.PAY_TYPE_GOOGLE_IAB means Google In-App Billing
-//				 * 	SdkConstants.PAY_TYPE_GENERAL_GATEWAY means ordinary payment gateway such as PayPal, etc.
-//				 */
-//				@Override
-//				public String getPayType() {
-//					if(ApusPlaySdk.getInstance().getConfig().isGoogleIab()){
-//						return SdkConstants.PAY_TYPE_GOOGLE_IAB;
-//					} else {
-//						return SdkConstants.PAY_TYPE_GENERAL_GATEWAY;
-//					}
-//				}
-//				/**
-//				 * The value used to make signature for given app.
-//				 * 
-//				 * @return the value to add to string to make a hash value, e.g. MD5
-//				 */
-//				@Override
-//				public String getSecretValue() {
-//					return "58d18185a8b2b77d57c36cee4b7e4703";
-//				}
-//				/**
-//				 * The value to public key 
-//				 * Google In-App Billing approach, get this "Services & APIs " 
-//				 * @return the base64 encoded with public key
-//				 */
-//				@Override
-//				public String getPublicKey() {
-//					// The based64 encoded public key by Google Play publish
-//					return 	"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArmWYkvt9+bcfLFpOG1HVrXXw3iYXc6D5FKwLs+CPcwBIMPTU2yOJSlY6shxPgGFUJI4OHHswc7/82vr4nsS6aN5UYaxqZI0+BytoQd558ugn88P5g3DqR3xEtyencQyVOoVQoqka8a/4o02RTKFSOPDggrJipZ0ogNwZg6/jhetbvruY+QTcNiJ9UgwLlGAFrOg/R7sWjv9Q4yS3zzts/d8Hnti0lf2JrY1dn/2jll68mamxzd0oykNHqdef3iHEVQXHKEG7dbZqg79Pu3Cz6Zq9JYSVMU6DN3OlRO9MtXwBkBieOn1C7I/pc3hL0n15gbIac8VmMGrAYbek1BF0xQIDAQAB";
-//				}
-//				/**
-//				 * The App Id is assigned by the Apus open system.
-//				 * 
-//				 * @return the app id by assigned by open system or the package for google play hosted app.
-//				 */
-//				@Override
-//				public String getAppId() {
-//					return "20003";
-//				}
-//				/**
-//				 * The app Name.
-//				 */
-//				@Override
-//				public String getAppName() {
-//					// TODO Auto-generated method stub
-//					return "ClientDemo";
-//				}
-//				@Override
-//				public boolean isAutoConsume() {
-//					// TODO Auto-generated method stub
-//					return true;
-//				}
-//			};
-		}
-		return payConfig;
-	}
+//	PayConfig payConfig=null;
+//    private PayConfig getPayConfig() {
+//		if(payConfig==null){
+//			// Not prepared yet, construct one
+//			// construct pay config according to the APK version
+//			// - For Google IAB, the getPayType() returns SdkConstants.PAY_TYPE_GOOGLE_IAB
+//			// - For Default pay gateway, the getPayType() returns SdkConstants.PAY_TYPE_GATEWAY
+//			payConfig = new IabPayConfig();
+//			if(ApusPlaySdk.getInstance().getConfig().isGoogleIab()){
+//				((IabPayConfig)payConfig).setPayType(SdkConstants.PAY_TYPE_GOOGLE_IAB);
+//			}else{
+//				((IabPayConfig)payConfig).setPayType(SdkConstants.PAY_TYPE_GENERAL_GATEWAY);
+//			}
+//		}
+//		return payConfig;
+//	}
     PayCallBack mPayCallBack = new PayCallBack(){
 	    	@Override
 	    	public void onAbort() {
@@ -403,5 +346,37 @@ public class NestPayImpl{
 	    			mProxy.invokeCallback(param);
 	    		}
 	    	}
+
+		@Override
+		public void onTopup(PayResult result) {
+			// TODO Auto-generated method stub
+			if("SUCCESS".equals(result.getResultCode())){
+				Log.d(TAG,"onPaySuccess!");
+		    		final JSONObject param = mProxy.getParams();
+		    		try {
+		    			param.put("result",0);
+		    			param.put("egretOrderId", param.getString("egretOrderId"));
+		    		} catch (JSONException e) {
+		    			// TODO Auto-generated catch block
+		    			e.printStackTrace();
+		    		}
+		    		if(null != mProxy){
+		    			mProxy.invokeCallback(param);
+		    		}
+			}else{
+				Log.d(TAG,"onPayFailed! code:"+ result.getErrorCode() + " msg:" + result.getMessage());
+		    		final JSONObject param = mProxy.getParams();
+		    		try {
+		    			param.put("result",-2);
+		    			param.put("egretOrderId", param.getString("egretOrderId"));
+		    		} catch (JSONException e) {
+		    			// TODO Auto-generated catch block
+		    			e.printStackTrace();
+		    		}
+		    		if(null != mProxy){
+		    			mProxy.invokeCallback(param);
+		    		}
+			}
+		}
     };
 }

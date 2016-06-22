@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.egret.egretframeworknative.engine.EgretGameEngine;
+import org.egret.runtime.nest.NestDelegate;
 
 import android.util.Log;
 
@@ -15,6 +16,7 @@ import com.egret.nest.apussdk.NestSocialImpl;
 import com.apusplay.sdk.ApusPlaySdk;
 import com.apusplay.sdk.ICallBack;
 import com.apusplay.sdk.InitCallBack;
+import com.apusplay.sdk.InitConfig;
 import com.apusplay.sdk.InitResult;
 import com.apusplay.sdk.SdkConstants;
 import com.apusplay.sdk.UserProfile;
@@ -33,6 +35,7 @@ public class MainActivity extends com.egret.androidsupport.GameActivity {
 			Log.e(TAG,"createApusSDK mGameEngine is lost");
 			return;
 		}
+		NestDelegate.temp_instance.API_DOMAIN = "http://tw.api.egret.com/v2/";
 		mGameEngine = gameEngine;
         createApusSDK(gameEngine); 
 	}
@@ -50,20 +53,54 @@ public class MainActivity extends com.egret.androidsupport.GameActivity {
 		return options;
 	}
 
+	private InitConfig getInitConfig() {
+		InitConfig initConfig = new InitConfig() {
+			@Override
+			public  String getAppId() {
+				return Constants.appId;
+			}
+
+			@Override
+			public  String getAppKey() {
+				return Constants.appSecret;
+			}
+
+			/**
+			 * The value to public key 
+			 * Google In-App Billing approach, get this "Services & APIs " 
+			 * @return the base64 encoded with public key
+			 */
+			@Override
+			public String getPublicKey() {
+				// The based64 encoded public key by Google Play publish
+				return Constants.publicKey;
+			}
+
+			@Override
+			public String getApusImId() {
+				return Constants.imId;
+			}
+
+			@Override
+			public String getApusAppSource() {
+				return Constants.appSource;
+			}
+
+			@Override
+			public boolean isSupportTopup() {
+				return true;
+			}
+
+		};
+		return initConfig;
+	}
 	/**
      * 创建并配置quickSDK
      * @param mGameEngine
      */
   	private void createApusSDK(EgretGameEngine gameEngine){
-	    	properties = new HashMap();
-	    	properties.put(SdkConstants.APP_KEY, "20173"); 
-		// Other configuration items
-		properties.put(SdkConstants.CONFIG_UIVERSION, 240);
-		properties.put(SdkConstants.CONFIG_SUPPORT_APK_CHANNEL,true);
-		properties.put(SdkConstants.CONFIG_GURU_CACHE_DIR,"/apusplay/gamecenter/cache");
-		
     		try {
-			ApusPlaySdk.initialize(getApplicationContext(), properties, new InitCallBack() {
+			ApusPlaySdk.initialize(getApplicationContext(), getInitConfig(), new InitCallBack() {
 				@Override
 				public void onAbort() {
 					// TODO Auto-generated method stub
