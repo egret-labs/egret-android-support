@@ -1,6 +1,6 @@
 ##Egret Android Support Release Notes 
 ---
-### Egret Android Support 3.1.2 Release Notes
+### Egret Android Support 3.1.3 Release Notes
 --
 Update：June 27, 2016
 
