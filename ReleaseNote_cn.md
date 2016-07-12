@@ -1,5 +1,13 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 3.1.4 Release Notes
+--
+更新时间：2016年07月12日
+
+- **[新特性]** 获取原生设备的电池电量信息。
+- **[改进]** 提高稳定性。
+- **[修复]** 修复其它BUG
+
 ### Egret Android Support 3.1.3 Release Notes
 --
 更新时间：2016年06月27日
