@@ -15,8 +15,11 @@ import android.app.Activity;
 import android.util.Log;
 
 import com.apusplay.sdk.ApusPlaySdk;
+import com.apusplay.sdk.RequestCallBack;
 import com.apusplay.sdk.RequestResult;
 import com.apusplay.sdk.SdkConstants;
+import com.apusplay.sdk.UserProfile;
+import com.apusplay.sdk.auth.AuthCallBack;
 import com.apusplay.sdk.pay.IabBroadcastReceiver.IabBroadcastListener;
 import com.apusplay.sdk.pay.IabInventory;
 import com.apusplay.sdk.pay.IabPay;
@@ -188,7 +191,7 @@ public class NestPayImpl{
 //        final JSONObject param = EgretReflectUtils.getNestProxyParam(proxy);
 
         Log.d(TAG, "launcher pay params:" + param.toString());
-        startPay(param);
+        beforePay(param);
 //        EgretSDKManager esm = EgretSDKManager.getInstance();
 //        esm.pay(param, new OnPayProcessListener() {
 //            @Override
@@ -206,6 +209,76 @@ public class NestPayImpl{
 //                EgretReflectUtils.invokeNestProxyCallback(proxy, json);
 //            }
 //        });
+    }
+    private void beforePay(final JSONObject param){
+    		ApusPlaySdk.getInstance().refurbishToken(mActivity, new RequestCallBack(){
+				@Override
+				public void onAbort() {
+					// TODO Auto-generated method stub
+				}
+				@Override
+				public void onFailure(Throwable arg0, int arg1, String arg2) {
+					// TODO Auto-generated method stub
+					//刷新token失败要优先logout确保下次login不会读取缓存数据
+					refreshTokenFailedLogout(new AuthCallBack(){
+						@Override
+						public void onAbort() {
+							// TODO Auto-generated method stub
+						}
+						@Override
+						public void onFailure(Throwable arg0, int arg1,
+								String arg2) {
+							// TODO Auto-generated method stub
+							Log.d(TAG,"onRefreshTokenFailedLogoutFailed!");
+					    		final JSONObject param = mProxy.getParams();
+					    		try {
+					    			param.put("result",-3);//需要CP提示token失效并重新唤起登录界面
+					    			param.put("egretOrderId", param.getString("egretOrderId"));
+					    		} catch (JSONException e) {
+					    			// TODO Auto-generated catch block
+					    			e.printStackTrace();
+					    		}
+					    		if(null != mProxy){
+					    			mProxy.invokeCallback(param);
+					    		}
+						}
+						@Override
+						public void onSuccess(UserProfile arg0) {
+							// TODO Auto-generated method stub
+						}
+						@Override
+						public void onLogout() {
+							// TODO Auto-generated method stub
+							Log.d(TAG,"onRefreshTokenFailedLogoutSuccess!");
+					    		final JSONObject param = mProxy.getParams();
+					    		try {
+					    			param.put("result",-3);//需要CP提示token失效并重新唤起登录界面
+					    			param.put("egretOrderId", param.getString("egretOrderId"));
+					    		} catch (JSONException e) {
+					    			// TODO Auto-generated catch block
+					    			e.printStackTrace();
+					    		}
+					    		if(null != mProxy){
+					    			mProxy.invokeCallback(param);
+					    		}
+						}
+	 				});
+				}
+				@Override
+				public void onSuccess(Object arg0) {
+					// TODO Auto-generated method stub
+			        startPay(param);
+				}
+    		});
+    }
+    
+    private void refreshTokenFailedLogout(final AuthCallBack acb){
+	    	mActivity.runOnUiThread(new Runnable(){
+	 			public void run(){
+	 				Log.i(TAG,"call logout success");
+	 				ApusPlaySdk.getInstance().logout(mActivity,acb);
+	 			}
+			});
     }
 	/**
 	 * 与egret的支付信息进行

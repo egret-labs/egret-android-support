@@ -167,11 +167,36 @@ public class NestLoginImpl{
 				public void onAbort() {
 					// TODO Auto-generated method stub
 					Log.d(TAG,"AuthCallBack onAbort");
+					JSONObject param = new JSONObject();
+					try {
+						//egret数据
+						param.put("result", "-1"); //中断
+						param.put("spLogin","1"); //渠道登录标识。默认1
+					} catch (JSONException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					Log.d(TAG,"onLoginAbort:"+param.toString());
+					mProxy.invokeCallback(param);
 				}
 				@Override
-				public void onFailure(Throwable arg0, int arg1, String arg2) {
+				public void onFailure(Throwable arg0, int errorcode, String message) {
 					// TODO Auto-generated method stub
-					Log.d(TAG,"AuthCallBack onFailure errorcode:"+arg1+" msg:"+arg2);
+					Log.d(TAG,"AuthCallBack onFailure errorcode:"+errorcode+" msg:"+message);
+					JSONObject param = new JSONObject();
+					Log.d(TAG,"raw login param:"+param.toString());
+					try {
+						//egret数据
+						param.put("result", "-2"); //失败
+						param.put("spLogin","1"); //渠道登录标识。默认1
+						param.put("errorcode", errorcode);
+						param.put("message", message);
+					} catch (JSONException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					Log.d(TAG,"onLoginFailed:"+param.toString());
+					mProxy.invokeCallback(param);
 				}
 				@Override
 				public void onSuccess(UserProfile userInfo) {
@@ -204,7 +229,18 @@ public class NestLoginImpl{
 				@Override
 				public void onLogout() {
 					// TODO Auto-generated method stub
-					
+					Log.d(TAG,"AuthCallBack onLogout");
+					JSONObject param = new JSONObject();
+					Log.d(TAG,"raw login param:"+param.toString());
+					try {
+						//egret数据
+						param.put("result", "0"); //登出成功
+					} catch (JSONException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					Log.d(TAG,"onLogout:"+param.toString());
+					mProxy.invokeCallback(param);
 				}
 	    		
 	    	};
