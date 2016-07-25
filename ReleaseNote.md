@@ -1,5 +1,15 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 3.1.5 Release Notes
+--
+Update：July 25, 2016
+
+miniSDKVersion:14
+
+- **[update]** MinSdkVersion Level14 .
+- **[Update]** Improved stability.
+- **[Fix]** Fixed bugs.
+
 ### Egret Android Support 3.1.4 Release Notes
 --
 Update：July 12, 2016
