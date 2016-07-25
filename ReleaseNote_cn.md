@@ -1,5 +1,15 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 3.1.5 Release Notes
+--
+更新时间：2016年07月25日
+
+miniSDKVersion:14
+
+- **[新特性]** 最低支持 Android Level14 。
+- **[改进]** 提高稳定性。
+- **[修复]** 修复其它BUG
+
 ### Egret Android Support 3.1.4 Release Notes
 --
 更新时间：2016年07月12日
