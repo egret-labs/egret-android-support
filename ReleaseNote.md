@@ -1,5 +1,16 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 3.1.6 Release Notes
+--
+Update：August 08, 2016
+
+miniSDKVersion:14
+
+- **[Fix]** Fixed the position of input box is wrong when height of input box and line height is different.
+- **[Fix]** Fixed lag problem when multi sound effect are simultaneously playing.
+- **[Update]** Improved stability.
+- **[Fix]** Fixed bugs.
+
 ### Egret Android Support 3.1.5 Release Notes
 --
 Update：July 25, 2016
