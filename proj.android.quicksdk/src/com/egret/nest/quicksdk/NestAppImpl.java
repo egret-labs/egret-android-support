@@ -6,6 +6,8 @@ import org.json.JSONObject;
 
 import android.app.Activity;
 
+import com.quicksdk.QuickSDK;
+import com.quicksdk.Sdk;
 import com.quicksdk.notifier.ExitNotifier;
 
 /**
@@ -22,8 +24,10 @@ public class NestAppImpl {
 	
 	public ExitNotifier exitNotifier = null;
 	
-	public NestAppImpl(){
+	private Activity mActivity;
+	public NestAppImpl(Activity act){
 		initNotifiers();
+		mActivity = act;
 	}
     /**
      * 功能描述:应用内附加功能开关
@@ -50,6 +54,12 @@ public class NestAppImpl {
              */
             obj.put("sendToDesktop", "0");
             //必须.将客户端的是否支持附加功能通知Runtime.游戏根据此结果决定是否开放附加功能
+            /**
+             * getInfo 参数定义
+             * 0:不支持 默认
+             * 1:支持创建快捷图标
+             */
+            obj.put("getInfo", "1");
             proxy.invokeCallback(obj);
 //            EgretReflectUtils.invokeNestProxyCallback(proxy, obj);
         } catch (JSONException e) {
@@ -84,7 +94,11 @@ public class NestAppImpl {
      * @param proxy
      */
     public void exitGame(final NestProxy proxy) {
-    	
+    		if(QuickSDK.getInstance().isShowExitDialog()){
+    			Sdk.getInstance().exit(mActivity);
+    		}else{
+    			mActivity.finish();
+    		}
     }
     
     public void initNotifiers(){
@@ -92,7 +106,7 @@ public class NestAppImpl {
 				@Override
 				public void onSuccess() {
 					// TODO Auto-generated method stub
-					
+					mActivity.finish();
 				}
 				
 				@Override

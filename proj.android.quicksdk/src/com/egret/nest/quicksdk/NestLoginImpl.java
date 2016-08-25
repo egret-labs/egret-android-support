@@ -225,11 +225,29 @@ public class NestLoginImpl{
 			public void onFailed(String arg0, String arg1) {
 				// TODO Auto-generated method stub
 				Log.d(TAG,"onLoginFailed:"+arg0 + "," +arg1);
+				JSONObject param = new JSONObject();
+				try {
+					param.put("result", -2);//失败
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				mProxy.invokeCallback(param);
+
 			}
 			@Override
 			public void onCancel() {
 				// TODO Auto-generated method stub
 				Log.d(TAG,"onLoginCancel");
+				JSONObject param = new JSONObject();
+				try {
+					param.put("result", -1);//取消
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				mProxy.invokeCallback(param);
+
 			}
 		};
 		logoutNotifier = new LogoutNotifier(){
@@ -237,11 +255,27 @@ public class NestLoginImpl{
 			public void onFailed(String arg0, String arg1) {
 				// TODO Auto-generated method stub
 				Log.d(TAG,"onLogoutFailed:"+arg0 + "," +arg1);
+				JSONObject param = new JSONObject();
+				try {
+					param.put("result", -2);//失败
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				mProxy.invokeCallback(param);
 			}
 			@Override
 			public void onSuccess() {
 				// TODO Auto-generated method stub
 				Log.d(TAG,"onLogoutSuccess");
+				JSONObject param = new JSONObject();
+				try {
+					param.put("result", 0);//成功
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				mProxy.invokeCallback(param);
 			}
 		};
     }

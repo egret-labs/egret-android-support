@@ -48,7 +48,7 @@ public class MainActivity extends com.egret.androidsupport.GameActivity {
 
 		NestLoginImpl mLoginImpl = new NestLoginImpl(this,gameEngine);
 		NestPayImpl mPayImpl = new NestPayImpl(this);
-		NestAppImpl mAppImpl = new NestAppImpl();
+		NestAppImpl mAppImpl = new NestAppImpl(this);
 		NestShareImpl mShareImpl = new NestShareImpl(this);
     	
 	    	Util.registerPlugin(gameEngine, "user", mLoginImpl);
@@ -135,6 +135,7 @@ public class MainActivity extends com.egret.androidsupport.GameActivity {
         	//调用渠道的退出框
         	if(QuickSDK.getInstance().isShowExitDialog()){
         		Sdk.getInstance().exit(this);
+        		return true;
         	}  
         default:
             return super.onKeyDown(keyCode, event);
