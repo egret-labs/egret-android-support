@@ -1,5 +1,18 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 3.1.7 Release Notes
+--
+Update：August 25, 2016
+
+miniSDKVersion:14
+
+- **[Fixed]** Fixed crash on setting illegal value of color.
+- **[Fixed]** Fixed crash on playing audios.
+- **[Fixed]** Fixed unable to load online audios.
+- **[Fixed]** Fixed audios cannot been released completely.
+- **[Add]** Support italic text.
+- **[Add]** Add ColorTransform Filter.
+
 ### Egret Android Support 3.1.6 Release Notes
 --
 Update：August 08, 2016

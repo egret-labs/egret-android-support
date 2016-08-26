@@ -1,5 +1,20 @@
 ##Egret Android Support Release Notes 
 ---
+### Egret Android Support 3.1.7 Release Notes
+--
+更新时间：2016年08月25日
+
+miniSDKVersion:14
+
+- **[修复]** 修复设置非法颜色值造成崩溃的问题。
+- **[修复]** 修复播放声音导致游戏崩溃的问题。
+- **[修复]** 修复不能在线加载音频的问题。
+- **[修复]** 修复退出游戏后音频没有释放完全的问题。
+- **[新特性]** 支持斜体文本。
+- **[新特性]** 添加ColorTransform滤镜。
+- **[改进]** 提高稳定性。
+- **[修复]** 修复其它BUG
+
 ### Egret Android Support 3.1.6 Release Notes
 --
 更新时间：2016年08月08日
