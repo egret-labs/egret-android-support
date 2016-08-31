@@ -4,6 +4,9 @@ package com.egret.nest.quicksdk;
 //import org.egret.egretruntimelauncher.nest.manager.OnPayProcessListener;
 //import org.egret.egretruntimelauncher.utils.EgretReflectUtils;
 //import org.egret.egretruntimelauncher.utils.LogUtil;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+
 import org.egret.runtime.nest.NestProxy;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -167,7 +170,13 @@ public class NestPayImpl implements PayNotifier{
 			final GameRoleInfo roleInfo = Util.getGameRole(param.getString("userId"),param.getString("userName"));
 			
 			orderInfo.setCpOrderID(param.getString("egretOrderId"));
-			orderInfo.setGoodsName(param.getString("goodsName"));
+			String goodsName = null;
+			try{
+				goodsName = URLDecoder.decode(param.getString("goodsName"),"utf-8");
+			}catch(UnsupportedEncodingException e){
+				e.printStackTrace();
+			}
+			orderInfo.setGoodsName(goodsName);
 			orderInfo.setQuantifier("");//个数统一为1，没有量词
 			orderInfo.setGoodsDesc("month_card");
 			orderInfo.setCount(1);
