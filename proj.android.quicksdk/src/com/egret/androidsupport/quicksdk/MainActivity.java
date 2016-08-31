@@ -36,8 +36,9 @@ public class MainActivity extends com.egret.androidsupport.GameActivity {
 	protected HashMap<String, Object> getGameOptions() {
 		HashMap<String,Object> options = super.getGameOptions();
         options.put("egret.runtime.nest", "4");
-        options.put("egret.runtime.spid", "20959");
-        options.put("egret.runtime.appkey","c9JhkOZGmD8HpdUgOBxR2");
+        options.put("egret.runtime.spid", "20959"); //传入指定的渠道id
+        options.put("egret.runtime.appkey",""); //appkey 请传空字符串
+        options.put("egret_open_api_version", "3");	
 		return options;
 	}
 	/**
