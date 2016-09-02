@@ -1,5 +1,17 @@
 ##Egret Android Support Release Notes 
 ---
+
+### Egret Android Support 3.1.8 Release Notes
+--
+Update：September 02, 2016
+
+miniSDKVersion:14
+
+- **[Fix]** Fixed prompt text in InputBox dont disappear while editting.
+- **[Fix]** Fixed crash on playing audios.
+- **[Update]** Improved stability.
+- **[Fix]** Fixed bugs.
+
 ### Egret Android Support 3.1.7 Release Notes
 --
 Update：August 25, 2016

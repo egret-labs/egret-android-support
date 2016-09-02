@@ -1,5 +1,17 @@
 ##Egret Android Support Release Notes 
 ---
+
+### Egret Android Support 3.1.8 Release Notes
+--
+更新时间：2016年09月02日
+
+miniSDKVersion:14
+
+- **[修复]** 修复输入框提示文字不会自动消失的问题。
+- **[修复]** 修复播放声音引起的闪退问题。
+- **[改进]** 提高稳定性。
+- **[修复]** 修复其它BUG
+
 ### Egret Android Support 3.1.7 Release Notes
 --
 更新时间：2016年08月25日
