@@ -1,6 +1,21 @@
 ##Egret Android Support Release Notes 
 ---
 
+### Egret Android Support 3.2.0 Release Notes
+--
+Update: September, 27 2016
+
+miniSDKVersion:14
+
+- **[Note]** This release optimized efficiency of rendering, if exception occurred when rendering, please close the optimization.
+- **[Add]** Supported filter rendering.
+- **[Add]** Supported mesh rendering.
+- **[Update]** Improved efficiency of the scene rendering.
+- **[Update]** Improved stability.
+- **[Fix]** Fixed text position shifts upward when rendering default font in some models.
+- **[Fix]** Fixed there must be a hot update when starting the game at the first time .
+- **[Fix]** Fixed bugs.
+
 ### Egret Android Support 3.1.8 Release Notes
 --
 Update：September 02, 2016
