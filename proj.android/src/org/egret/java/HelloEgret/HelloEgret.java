@@ -5,36 +5,35 @@ import java.util.HashMap;
 
 import org.egret.egretframeworknative.EgretRuntime;
 import org.egret.egretframeworknative.engine.EgretGameEngine;
+import org.egret.java.Launcher.GameLauncher;
 
 import android.app.Activity;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
-import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
 public class HelloEgret extends Activity {
+
     private interface IRuntimeInterface {
         public void callback(String message);
         // 因为遗留问题 callBack 也是接受的
     }
-    
+	
     private static final String EGRET_ROOT = "egret";
     //TODO: egret publish之后，修改以下常量为生成的game_code名
     private static final String EGRET_PUBLISH_ZIP = "game_code_0123456789.zip";
     protected static final String TAG = "HelloEgret";
     
-  //若bUsingPlugin为true，开启插件
+   	//若bUsingPlugin为true，开启插件
     private boolean bUsingPlugin = false;
 
-    private EgretGameEngine gameEngine;
     private String egretRoot;
     private String gameId;
     private String loaderUrl;
     private String updateUrl;
-    
+    private GameLauncher gameLauncher;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -48,33 +47,32 @@ public class HelloEgret extends Activity {
         gameId = "local";
         //TODO: DEBUG 使用 2
         setLoaderUrl(2);
-        gameEngine = new EgretGameEngine();
         // 设置游戏的选项  (set game options)
         HashMap<String, Object> options = getGameOptions();
-        gameEngine.game_engine_set_options(options);
-        // 设置加载进度条  (set loading progress bar)
-        gameEngine.game_engine_set_loading_view(new GameLoadingView(this));
+
+        gameLauncher = new GameLauncher(this, options,new GameLoadingView(this));
+        
         // 创建Egret<->Runtime的通讯 (create pipe between Egret and Runtime)
         setInterfaces();
-        // 初始化并获得渲染视图 (initialize game engine and obtain rendering view)
-        gameEngine.game_engine_init(this);
-        View gameEngineView = gameEngine.game_engine_get_view();
+        
+        gameLauncher.run();
 
-        setContentView(gameEngineView);
     }
     
     private void setInterfaces() {
-        // Egret（TypeScript）－Runtime（Java）通讯
-        // setRuntimeInterface(String name, IRuntimeInterface interface) 用于设置一个runtime的目标接口
-        // callEgretInterface(String name, String message) 用于调用Egret的接口，并传递消息
-        gameEngine.setRuntimeInterface("RuntimeInterface", new IRuntimeInterface() {
+    	final EgretGameEngine engine = gameLauncher.getEgretGameEngine();
+        if(engine == null){
+        	Log.d(TAG, "setInterfaces: EgretGameEngine is null.");
+        	return;
+        }
+        engine.setRuntimeInterface("RuntimeInterface", new IRuntimeInterface() {
            @Override
-            public void callback(String message) {
-                Log.d(TAG, message);
-                gameEngine.callEgretInterface("EgretInterface", "A message from runtime");
-            }
-        });
-    }
+           public void callback(String message) {
+               Log.d(TAG, message);
+               engine.callEgretInterface("EgretInterface", "A message from runtime");
+           }
+       });
+   }
 
     private HashMap<String, Object> getGameOptions() {
         HashMap<String, Object> options = new HashMap<String, Object>();
@@ -83,8 +81,10 @@ public class HelloEgret extends Activity {
         options.put(EgretRuntime.OPTION_GAME_LOADER_URL, loaderUrl);
         options.put(EgretRuntime.OPTION_GAME_UPDATE_URL, updateUrl);
         if(bUsingPlugin){
-        	String pluginConf = "{'plugins':[{'name':'androidca','class':'org.egret.egretframeworknative.CameraAudio','types':'jar,so'}]}";
-			options.put(EgretRuntime.OPTION_GAME_GLVIEW_TRANSPARENT, "true");
+        	String pluginConf ="{'plugins':[{'name':'liveplugin'," +
+                    "'packagelist':['EgretLivePlugin.zip','test.zip']," +
+                    "'class':'org.egret.egretframeworknative.PublishAndPlay','types':'jar,so'}]}";
+					options.put(EgretRuntime.OPTION_GAME_GLVIEW_TRANSPARENT, "true");
 	        options.put(EgretRuntime.OPTION_EGRET_PLUGIN_CONF, pluginConf);
         }
         return options;
@@ -116,20 +116,29 @@ public class HelloEgret extends Activity {
     @Override
     public void onPause() {
         super.onPause();
-        gameEngine.game_engine_onPause();
+        EgretGameEngine engine = gameLauncher.getEgretGameEngine();
+        if(engine != null){
+        	engine.game_engine_onPause();
+        }
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        gameEngine.game_engine_onResume();
+        EgretGameEngine engine = gameLauncher.getEgretGameEngine();
+        if(engine != null){
+        	engine.game_engine_onResume();
+        }
     }
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         switch (keyCode) {
         case KeyEvent.KEYCODE_BACK:
-            gameEngine.game_engine_onStop();
+        	EgretGameEngine engine = gameLauncher.getEgretGameEngine();
+            if(engine != null){
+            	engine.game_engine_onStop();
+            }
             finish();
             return true;
         default:
