@@ -82,7 +82,7 @@ public class HelloEgret extends Activity {
         options.put(EgretRuntime.OPTION_GAME_UPDATE_URL, updateUrl);
         if(bUsingPlugin){
         	String pluginConf ="{'plugins':[{'name':'liveplugin'," +
-                    "'packagelist':['EgretLivePlugin.zip','test.zip']," +
+                    "'packagelist':['EgretLivePlugin.zip']," +
                     "'class':'org.egret.egretframeworknative.PublishAndPlay','types':'jar,so'}]}";
 					options.put(EgretRuntime.OPTION_GAME_GLVIEW_TRANSPARENT, "true");
 	        options.put(EgretRuntime.OPTION_EGRET_PLUGIN_CONF, pluginConf);
