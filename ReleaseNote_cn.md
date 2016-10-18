@@ -1,6 +1,19 @@
 ##Egret Android Support Release Notes 
 ---
 
+### Egret Android Support 3.2.1 Release Notes
+--
+更新时间：2016年10月18日
+
+miniSDKVersion:14
+
+- **[注意]** 注意：此版本添加了对渲染效率的优化，如果渲染时出现了异常请在引擎中关闭优化。
+- **[改进]** 支持修改游戏所在的View的层级。
+- **[修复]** 修复部分情况下渲染出错的问题。
+- **[修复]** 修复部分机型中文字位置偏移的问题。
+- **[修复]** 处理同时加载音频的数量过多的情况。
+- **[修复]** 修复其它BUG
+
 ### Egret Android Support 3.2.0 Release Notes
 --
 更新时间：2016年09月27日
