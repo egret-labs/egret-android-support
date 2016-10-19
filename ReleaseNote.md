@@ -1,6 +1,19 @@
 ##Egret Android Support Release Notes 
 ---
 
+### Egret Android Support 3.2.1 Release Notes
+--
+Updated: October 18, 2016
+
+miniSDKVersion:14
+
+- **[Note]** This release optimized efficiency of rendering, if exception occurred when rendering, please close the optimization.
+- **[Update]** Support modifying the game View hierarchy.
+- **[Fix]** Fixed rendering problems under specific cases .
+- **[Fix]** Fixed text position offset in some models.
+- **[Fix]** Handled situation that the number of audios is excessive.
+- **[Fix]** Fixed bugs.
+
 ### Egret Android Support 3.2.0 Release Notes
 --
 Update: September, 27 2016
