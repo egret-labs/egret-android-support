@@ -1,6 +1,17 @@
 ##Egret Android Support Release Notes 
 ---
 
+### Egret Android Support 3.2.2 Release Notes
+--
+Updated: November 01, 2016
+
+miniSDKVersion:14
+
+- **[Fix]** Fixed rendering problems under specific cases.
+- **[Fix]** Fixed text shows wrong color when editting input box with prompt text at the first time.
+- **[Update]** Add a switch to optimize rendering efficiency(details: http://developer.egret.com/cn/github/egret-docs/Engine2D/native/other/index.html ).
+- **[Fix]** Fixed bugs.
+
 ### Egret Android Support 3.2.1 Release Notes
 --
 Updated: October 18, 2016
