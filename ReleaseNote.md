@@ -1,6 +1,18 @@
 ##Egret Android Support Release Notes 
 ---
 
+### Egret Android Support 3.2.3 Release Notes
+--
+Updated: November 15, 2016
+
+miniSDKVersion:14
+
+- **[Fix]** Fixed setting volume of audios is useless.
+- **[Fix]** Fixed part of audios could not play caused by actively stop audios repeatedly.
+- **[Fix]** Fixed games crashed on some Android simulator.
+- **[Fix]** Fixed cursor would not be the end of the text when input box got focus.
+- **[Fix]** Fixed bugs.
+
 ### Egret Android Support 3.2.2 Release Notes
 --
 Updated: November 01, 2016
