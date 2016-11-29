@@ -13,6 +13,8 @@ import android.util.Log;
 /**
  * Splash Activity。
  * 
+ * 开启Splash功能。请先按照AndroidManifest.xml中的注释修改好AndroidManifest。
+ * 
  * 当前Activity使用了一个特定的Theme。这个Theme有背景色和一张背景图。
  * 
  * 背景色修改： 1.在res/values/colors.xml中添加对应颜色。
