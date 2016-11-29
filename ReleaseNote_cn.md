@@ -1,6 +1,20 @@
 ##Egret Android Support Release Notes 
 ---
 
+### Egret Android Support 3.2.4 Release Notes
+--
+更新时间：2016年11月29日
+
+miniSDKVersion:14
+
+- **[修复]** 修复设置音频起始播放时间有时无效的问题。
+- **[修复]** 修复部分滤镜表现错误的问题。
+- **[修复]** 重写热更新的逻辑，考虑网络断开等情况。
+- **[修复]** 修复部分场景下设置单行输入无效的问题。
+- **[新特性]** 添加绘制纹理的效率优化开关。
+- **[新特性]** 新增Splash功能。应用启动瞬间会显示一张图片。使用方式见SplashActivity中的注释。
+- **[修复]** 修复其它BUG
+
 ### Egret Android Support 3.2.3 Release Notes
 --
 更新时间：2016年11月15日

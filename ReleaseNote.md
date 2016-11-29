@@ -1,6 +1,20 @@
 ##Egret Android Support Release Notes 
 ---
 
+### Egret Android Support 3.2.4 Release Notes
+--
+Updated: November 29, 2016
+
+miniSDKVersion:14
+
+- **[Fix]** Fixed setting start time of audios sometimes invalid.
+- **[Fix]** Fixed rendering of filters.
+- **[Fix]** Override the hot update logic, consider the network disconnect and other cases.
+- **[Fix]** Fixed setting input box to single line sometimes invalid.
+- **[Add]** Added optimization switch for rendering textures.
+- **[Add]** Added Splash features. Applications display a picture instantly at start. Usage is in the comments in SplashActivity.
+- **[Fix]** Fixed bugs.
+
 ### Egret Android Support 3.2.3 Release Notes
 --
 Updated: November 15, 2016
