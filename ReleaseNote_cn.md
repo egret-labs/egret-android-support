@@ -1,6 +1,16 @@
 ##Egret Android Support Release Notes 
 ---
 
+### Egret Android Support 3.2.5 Release Notes
+--
+更新时间：2016年12月13日
+
+miniSDKVersion:14
+
+- **[修复]** 修复3.2.4中出现的不进行热更新时不出现GameLoadingView的问题。
+- **[修复]** 修复设置GLSurfaceView的层级之后，输入框被遮挡的问题。
+- **[修复]** 修复其它BUG
+
 ### Egret Android Support 3.2.4 Release Notes
 --
 更新时间：2016年11月29日

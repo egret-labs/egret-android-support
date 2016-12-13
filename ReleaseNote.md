@@ -1,6 +1,16 @@
 ##Egret Android Support Release Notes 
 ---
 
+### Egret Android Support 3.2.5 Release Notes
+--
+Updated: December 13, 2016
+
+miniSDKVersion:14
+
+- **[Fix]** Fixed GameLoadingView doesn't show up if hot-update is not proceed appeared in 3.2.4.
+- **[Fix]** Fixed input box is sheltered after changing the hierarchy of GLSurfaceView.
+- **[Fix]** Fixed bugs.
+
 ### Egret Android Support 3.2.4 Release Notes
 --
 Updated: November 29, 2016
