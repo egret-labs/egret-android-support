@@ -21,20 +21,9 @@ public class HelloEgret extends Activity {
         // 因为遗留问题 callBack 也是接受的
     }
     
-    private static final String EGRET_ROOT = "egret";
-    //TODO: egret publish之后，修改以下常量为生成的game_code名
-    private static final String EGRET_PUBLISH_ZIP = "game_code_0123456789.zip";
     protected static final String TAG = "HelloEgret";
     
-  //若bUsingPlugin为true，开启插件
-    private boolean bUsingPlugin = false;
-
     private EgretGameEngine gameEngine;
-    private String egretRoot;
-    private String gameId;
-    private String loaderUrl;
-    private String updateUrl;
-    
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -44,16 +33,14 @@ public class HelloEgret extends Activity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         
-        egretRoot = new File(getFilesDir(), EGRET_ROOT).getAbsolutePath();
-        gameId = "local";
-        //TODO: DEBUG 使用 2
-        setLoaderUrl(2);
         gameEngine = new EgretGameEngine();
         // 设置游戏的选项  (set game options)
-        HashMap<String, Object> options = getGameOptions();
+        Bundle bundle = getIntent().getExtras();
+        GameOptionDescriptor gameOptionDescriptor = (GameOptionDescriptor) bundle.get("gameOption");
+        HashMap<String, Object> options = gameOptionDescriptor.getOptions();
+        
         gameEngine.game_engine_set_options(options);
-        // 设置加载进度条  (set loading progress bar)
-        gameEngine.game_engine_set_loading_view(new GameLoadingView(this));
+        
         // 创建Egret<->Runtime的通讯 (create pipe between Egret and Runtime)
         setInterfaces();
         // 初始化并获得渲染视图 (initialize game engine and obtain rendering view)
@@ -74,43 +61,6 @@ public class HelloEgret extends Activity {
                 gameEngine.callEgretInterface("EgretInterface", "A message from runtime");
             }
         });
-    }
-
-    private HashMap<String, Object> getGameOptions() {
-        HashMap<String, Object> options = new HashMap<String, Object>();
-        options.put(EgretRuntime.OPTION_EGRET_GAME_ROOT, egretRoot);
-        options.put(EgretRuntime.OPTION_GAME_ID, gameId);
-        options.put(EgretRuntime.OPTION_GAME_LOADER_URL, loaderUrl);
-        options.put(EgretRuntime.OPTION_GAME_UPDATE_URL, updateUrl);
-        if(bUsingPlugin){
-        	String pluginConf = "{'plugins':[{'name':'androidca','class':'org.egret.egretframeworknative.CameraAudio','types':'jar,so'}]}";
-			options.put(EgretRuntime.OPTION_GAME_GLVIEW_TRANSPARENT, "true");
-	        options.put(EgretRuntime.OPTION_EGRET_PLUGIN_CONF, pluginConf);
-        }
-        return options;
-    }
-
-    private void setLoaderUrl(int mode) {
-        switch (mode) {
-        case 2:
-            // local DEBUG mode
-            // 本地DEBUG模式，发布请使用0本地zip，或者1网络获取zip
-            loaderUrl = "";
-            updateUrl = "";
-            break;
-        case 1:
-            // http request zip RELEASE mode, use permission INTERNET
-            // 请求网络zip包发布模式，需要权限 INTERNET
-            loaderUrl = "http://www.example.com/" + EGRET_PUBLISH_ZIP;
-            updateUrl = "http://www.example.com/";
-            break;
-        default:
-            // local zip RELEASE mode, default mode, `egret publish -compile --runtime native`
-            // 私有空间zip包发布模式, 默认模式, `egret publish -compile --runtime native`
-            loaderUrl = EGRET_PUBLISH_ZIP;
-            updateUrl = "";
-            break;
-        }
     }
 
     @Override
