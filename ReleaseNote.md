@@ -1,6 +1,18 @@
 ##Egret Android Support Release Notes 
 ---
 
+### Egret Android Support 3.2.6 Release Notes
+--
+Updated: December 27, 2016
+
+miniSDKVersion:14
+
+- **[Update]** Add template for custom hot-update methods.
+- **[Update]** Https request would not need to verificate certificates.
+- **[Fix]** Fixed the application could not launch again after hot-update failed.
+- **[Fix]** Fixed GameLoadingView doesn't show up if run game with local zip.
+- **[Fix]** Fixed bugs.
+
 ### Egret Android Support 3.2.5 Release Notes
 --
 Updated: December 13, 2016

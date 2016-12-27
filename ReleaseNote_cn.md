@@ -1,6 +1,18 @@
 ##Egret Android Support Release Notes 
 ---
 
+### Egret Android Support 3.2.6 Release Notes
+--
+更新时间：2016年12月27日
+
+miniSDKVersion:14
+
+- **[改进]** 增加自定义热更新的模版。
+- **[改进]** https请求不再需要验证证书。
+- **[修复]** 修复热更新失败后不能再次启动的问题。
+- **[修复]** 修复启动本地zip游戏包不会出现GameLoadingView的问题。
+- **[修复]** 修复其它BUG
+
 ### Egret Android Support 3.2.5 Release Notes
 --
 更新时间：2016年12月13日
