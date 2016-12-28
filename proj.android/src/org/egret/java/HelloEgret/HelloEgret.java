@@ -39,19 +39,22 @@ public class HelloEgret extends Activity {
     private static final String EGRET_ROOT = "egret";
     //用来测试热更新的地址，可替换为正式的地址
     private static  String TEST_JSON_URL = "http://10.0.9.196:8860/test.json";
+    private final String EGRET_PUBLISH_ZIP = "game_code_xxxxxx.zip";
     //若bUsingPlugin为true，开启插件
     private boolean bUsingPlugin = false;
-
+    
     private String egretRoot;
     private String gameId;
     protected static final String TAG = "GameViewActivity";
     private EgretGameEngine gameEngine;
     //用来显示更新进度的进度条
     private ProgressBar progressBar = null;
-
+    private boolean _customUpdate = false;
+    private HashMap<String, Object> options;
+    
     private HashMap<String, Object> getGameOptions() {
         SharedPreferences sharedPreferences = getSharedPreferences(getString(R.string.game_option), 0);
-        HashMap<String, Object> options = new HashMap<String, Object>();
+        options = new HashMap<String, Object>();
         options.put(EgretRuntime.OPTION_EGRET_GAME_ROOT, egretRoot);
         options.put(EgretRuntime.OPTION_GAME_ID, gameId);
         options.put(EgretRuntime.OPTION_GAME_LOADER_URL, "");
@@ -71,7 +74,7 @@ public class HelloEgret extends Activity {
         gameEngine = new EgretGameEngine();
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+                             WindowManager.LayoutParams.FLAG_FULLSCREEN);
         //
         setContentView(R.layout.activity_loading);
         this.progressBar = (ProgressBar)findViewById(R.id.progressBar);
@@ -79,22 +82,58 @@ public class HelloEgret extends Activity {
         //设置egret根目录和gameId
         egretRoot = new File(getFilesDir(), EGRET_ROOT).getAbsolutePath();
         gameId = "local";
-        //构造HotUpdateTask类的实例
-        HotUpdateTask hotUpdateTask = new HotUpdateTask(TEST_JSON_URL, gameId);
-        //开始执行HotUpdateTask
-        hotUpdateTask.execute();
+        
+        /* 使用自定义热更新 */
+//        //构造HotUpdateTask类的实例
+//        HotUpdateTask hotUpdateTask = new HotUpdateTask(TEST_JSON_URL, gameId);
+//        //开始执行HotUpdateTask
+//        hotUpdateTask.execute();
+        
+        /* 使用默认热更新 */
+        runGame();
     }
-
+    
     private void runGame(){
         // 设置游戏的选项  (set game options)
         gameEngine.game_engine_set_options(getGameOptions());
-        // 设置加载进度条  (set loading progress bar)
+        
+        if (!_customUpdate) {
+            setLoaderUrl(2);
+        }
+        
         // 创建Egret<->Runtime的通讯 (create pipe between Egret and Runtime)
         setInterfaces();
         // 初始化并获得渲染视图 (initialize game engine and obtain rendering view)
         gameEngine.game_engine_init(this);
         View gameEngineView = gameEngine.game_engine_get_view();
         setContentView(gameEngineView);
+    }
+    
+    private void setLoaderUrl(int mode) {
+        String loaderUrl = "";
+        String updateUrl = "";
+        switch (mode) {
+            case 2:
+                // local DEBUG mode
+                // 本地DEBUG模式，发布请使用0本地zip，或者1网络获取zip
+                loaderUrl = "";
+                updateUrl = "";
+                break;
+            case 1:
+                // http request zip RELEASE mode, use permission INTERNET
+                // 请求网络zip包发布模式，需要权限 INTERNET
+                loaderUrl = "http://www.example.com/" + EGRET_PUBLISH_ZIP;
+                updateUrl = "http://www.example.com/";
+                break;
+            default:
+                // local zip RELEASE mode, default mode, `egret publish -compile --runtime native`
+                // 私有空间zip包发布模式, 默认模式, `egret publish -compile --runtime native`
+                loaderUrl = EGRET_PUBLISH_ZIP;
+                updateUrl = "";
+                break;
+        }
+        options.put(EgretRuntime.OPTION_GAME_LOADER_URL, loaderUrl);
+        options.put(EgretRuntime.OPTION_GAME_UPDATE_URL, updateUrl);
     }
     
     private void setInterfaces() {
@@ -149,6 +188,8 @@ public class HelloEgret extends Activity {
         //后台运行的逻辑写在doInBackground方法中
         @Override
         protected String doInBackground(Integer... params) {
+            _customUpdate = true;
+            
             //先从服务器获取json内容
             String jsonInfo = getGameJson();
 
