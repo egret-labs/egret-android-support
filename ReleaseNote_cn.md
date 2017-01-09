@@ -1,6 +1,17 @@
 ##Egret Android Support Release Notes 
 ---
 
+### Egret Android Support 4.0.0 Release Notes
+--
+更新时间：2017年01月09日
+
+miniSDKVersion:14
+
+- **[新特性]** 添加对wss的支持。
+- **[修复]** 修改自定义热更新的模版，默认以旧版本的方式启动。
+- **[修复]** 修复热更新失败后仍然会更新版本信息的问题。
+- **[修复]** 修复其它BUG
+
 ### Egret Android Support 3.2.6 Release Notes
 --
 更新时间：2016年12月27日

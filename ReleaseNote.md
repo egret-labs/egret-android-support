@@ -1,6 +1,17 @@
 ##Egret Android Support Release Notes 
 ---
 
+### Egret Android Support 4.0.0 Release Notes
+--
+Updated: January 09, 2017
+
+miniSDKVersion:14
+
+- **[Add]** Added support for wss protocol.
+- **[Fix]** Edit template for custom hot-update methods, set old version of hot-update as default.
+- **[Fix]** Fixed game version record would be updated even if hot-update is not finished successfully.
+- **[Fix]** Fixed bugs.
+
 ### Egret Android Support 3.2.6 Release Notes
 --
 Updated: December 27, 2016
