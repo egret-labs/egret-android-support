@@ -25,7 +25,7 @@ import java.util.zip.ZipFile;
 public class HotUpdate {
 
     // URL for json
-    public String jsonUrl = "http://api.ygys.egret-labs.org/wbrt.php";
+    public String jsonUrl = "http://www.example.com/gameInfo.json";
 
     // zip path
     private String zipPath;
