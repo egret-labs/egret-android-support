@@ -1,6 +1,21 @@
 ##Egret Android Support Release Notes 
 ---
 
+### Egret Android Support 4.0.1 Release Notes
+--
+更新时间：2017年01月24日
+
+miniSDKVersion:14
+
+- **[新特性]** 提供图片选择器功能（使用方法请参考开发者中心的相关文档）。
+- **[新特性]** 支持将ArrayBuffer或Base64转换为贴图（使用方法请参考开发者中心的相关文档）。
+- **[修复]** 修复开启CmdBatch之后部分场景矢量图设置透明度无效的问题。
+- **[修复]** 修复热更新相关的问题。
+- **[修复]** 修复部分机型下滤镜shader不能编译的问题。
+- **[修复]** 修复输入框在开始编辑前可能被键盘遮挡的问题。
+- **[修复]** 修复4.0.0中出现的WebSocket不能连接非默认端口的问题。
+- **[修复]** 修复其它BUG
+
 ### Egret Android Support 4.0.0 Release Notes
 --
 更新时间：2017年01月09日

@@ -1,6 +1,21 @@
 ##Egret Android Support Release Notes 
 ---
 
+### Egret Android Support 4.0.1 Release Notes
+--
+Updated: January 24, 2017
+
+miniSDKVersion:14
+
+- **[Add]** Added image picker feature(Please refer to the Developer Center to get instructions).
+- **[Add]** Support for converting ArrayBuffer or Base64 to textures(Please refer to the Developer Center to get instructions).
+- **[Fix]** Fixed setting the transparency of the vector illustration is invaild after opening CmdBatch.
+- **[Fix]** Fixed issues related to hot update.
+- **[Fix]** Fixed the filter shader can not be compiled on some phone models.
+- **[Fix]** Fixed the input box may be obscured by the keyboard before starting editing.
+- **[Fix]** Fixed WebSocket can not connect to a non-default port that appeared in the last version.
+- **[Fix]** Fixed bugs.
+
 ### Egret Android Support 4.0.0 Release Notes
 --
 Updated: January 09, 2017
