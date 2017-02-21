@@ -1,6 +1,18 @@
 ##Egret Android Support Release Notes 
 ---
 
+### Egret Android Support 4.0.2 Release Notes
+--
+Updated: February 21, 2017
+
+miniSDKVersion:14
+
+- **[Fix]** Fixed the frequent switching between several input boxes that could cause a crash problem.
+- **[Fix]** Fixed using filters on some phones can cause a crash.
+- **[Fix]** Fixed some small audio may cause crash.
+- **[Fix]** Fixed the input box does not show right at partial resolution.
+- **[Fix]** Fixed bugs.
+
 ### Egret Android Support 4.0.1 Release Notes
 --
 Updated: January 24, 2017

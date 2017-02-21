@@ -1,6 +1,18 @@
 ##Egret Android Support Release Notes 
 ---
 
+### Egret Android Support 4.0.2 Release Notes
+--
+更新时间：2017年02月21日
+
+miniSDKVersion:14
+
+- **[修复]** 修复在几个输入框之间频繁切换可能导致闪退的问题。
+- **[修复]** 修复开启滤镜在部分机型上闪退的问题。
+- **[修复]** 修复部分小体积的音频可能导致闪退的问题。
+- **[修复]** 修复在部分分辨率下输入框表现不对的问题。
+- **[修复]** 修复其它BUG
+
 ### Egret Android Support 4.0.1 Release Notes
 --
 更新时间：2017年01月24日
