@@ -1,6 +1,15 @@
 ##Egret Android Support Release Notes 
 ---
 
+### Egret Android Support 4.0.3 Release Notes
+--
+Updated: March 08, 2017
+
+miniSDKVersion:14
+
+- **[Fix]** Fixed the images saved by the drawToTexture interface would be partially rendered incorrectly.
+- **[Fix]** Fixed bugs.
+
 ### Egret Android Support 4.0.2 Release Notes
 --
 Updated: February 21, 2017

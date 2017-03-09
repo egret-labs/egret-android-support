@@ -1,6 +1,15 @@
 ##Egret Android Support Release Notes 
 ---
 
+### Egret Android Support 4.0.3 Release Notes
+--
+更新时间：2017年03月08日
+
+miniSDKVersion:14
+
+- **[修复]** 修复drawToTexture接口保存的图片在部分情况下渲染出错的问题。
+- **[修复]** 修复其它BUG
+
 ### Egret Android Support 4.0.2 Release Notes
 --
 更新时间：2017年02月21日
