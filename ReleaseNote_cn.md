@@ -1,6 +1,17 @@
 ##Egret Android Support Release Notes 
 ---
 
+### Egret Android Support 4.1.0 Release Notes
+--
+更新时间：2017年05月23日
+
+miniSDKVersion:14
+
+- **[修复]** 修复播放声音引起卡顿和闪退的问题。
+- **[修复]** 修复设置背景透明无效的问题。
+- **[修复]** 修复开启优化后部分场景渲染出错的问题。
+- **[修复]** 修复其它BUG
+
 ### Egret Android Support 4.0.3 Release Notes
 --
 更新时间：2017年03月08日
