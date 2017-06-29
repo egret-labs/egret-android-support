@@ -1,6 +1,17 @@
 ##Egret Android Support Release Notes 
 ---
 
+### Egret Android Support 5.0.1 Release Notes
+--
+更新时间：2017年06月29日
+
+miniSDKVersion:14
+
+- **[修复]** 修复播放短音频可能会重复播放的问题。
+- **[修复]** 修复进入后台可能会导致音频不能播放的问题。
+- **[修复]** 修复drawToTexture可能渲染出错的问题。
+- **[修复]** 修复其它BUG
+
 ### Egret Android Support 4.1.0 Release Notes
 --
 更新时间：2017年05月23日
