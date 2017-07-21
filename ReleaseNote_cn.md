@@ -1,6 +1,15 @@
 ##Egret Android Support Release Notes 
 ---
 
+### Egret Android Support 5.0.3 Release Notes
+--
+更新时间：2017年07月21日
+
+miniSDKVersion:14
+
+- **[修复]** 修复不能正确获取当前播放时间的问题。
+- **[修复]** 修复其它BUG
+
 ### Egret Android Support 5.0.1 Release Notes
 --
 更新时间：2017年06月29日

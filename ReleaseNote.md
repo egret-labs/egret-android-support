@@ -1,6 +1,15 @@
 ##Egret Android Support Release Notes 
 ---
 
+### Egret Android Support 5.0.3 Release Notes
+--
+Updated: July 21, 2017
+
+miniSDKVersion:14
+
+- **[Fix]** Fixed current playback time cannot be read correctly
+- **[Fix]** Fixed bugs.
+
 ### Egret Android Support 5.0.1 Release Notes
 --
 Updated: June 29, 2017
