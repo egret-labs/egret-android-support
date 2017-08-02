@@ -1,6 +1,17 @@
 ##Egret Android Support Release Notes 
 ---
 
+### Egret Android Support 5.0.5 Release Notes
+--
+更新时间：2017年08月03日
+
+miniSDKVersion:14
+
+- **[修复]** 修复5.*系统的中文字体明显向下偏移的问题。
+- **[修复]** 修复连续调用egret.getOption可能引起闪退的问题。
+- **[修复]** 修复5.0.3中出现的非第一次启动有概率闪退的问题。
+- **[修复]** 修复其它BUG
+
 ### Egret Android Support 5.0.3 Release Notes
 --
 更新时间：2017年07月21日

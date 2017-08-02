@@ -1,6 +1,17 @@
 ##Egret Android Support Release Notes 
 ---
 
+### Egret Android Support 5.0.5 Release Notes
+--
+Updated: July 03, 2017
+
+miniSDKVersion:14
+
+- **[Fix]** Fixed Chinese font is clearly downwards on Android 5.*.
+- **[Fix]** Fixed continuously calling egret.getOption may cause a flashback.
+- **[Fix]** Fixed bug in version 5.0.3 that application has probability of flashing at non-first start.
+- **[Fix]** Fixed bugs.
+
 ### Egret Android Support 5.0.3 Release Notes
 --
 Updated: July 21, 2017
