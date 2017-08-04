@@ -3,7 +3,7 @@
 
 ### Egret Android Support 5.0.5 Release Notes
 --
-更新时间：2017年08月03日
+更新时间：2017年08月04日
 
 miniSDKVersion:14
 
