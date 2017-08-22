@@ -1,6 +1,16 @@
 ##Egret Android Support Release Notes 
 ---
 
+### Egret Android Support 5.0.6 Release Notes
+--
+Updated: August 22, 2017
+
+miniSDKVersion:14
+
+- **[Fix]** Fixed color matrix filter rendering error.
+- **[Fix]** Fixed the time of LoadingView appearance lags behind.
+- **[Fix]** Fixed bugs.
+
 ### Egret Android Support 5.0.5 Release Notes
 --
 Updated: August 04, 2017

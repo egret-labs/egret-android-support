@@ -1,6 +1,16 @@
 ##Egret Android Support Release Notes 
 ---
 
+### Egret Android Support 5.0.6 Release Notes
+--
+更新时间：2017年08月22日
+
+miniSDKVersion:14
+
+- **[修复]** 修复颜色矩阵滤镜渲染错误的问题。
+- **[修复]** 修复LoadingView显示滞后的问题。
+- **[修复]** 修复其它BUG
+
 ### Egret Android Support 5.0.5 Release Notes
 --
 更新时间：2017年08月04日
