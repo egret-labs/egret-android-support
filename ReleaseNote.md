@@ -1,6 +1,18 @@
 ##Egret Android Support Release Notes 
 ---
 
+### Egret Android Support 5.0.7 Release Notes
+--
+Updated: September 05, 2017
+
+miniSDKVersion:14
+
+- **[Fix]** Fixed parts of variables are not released after calling game\_engine\_onStop.
+- **[Fix]** Fixed the alpha value of color matrix filter is incorrect in version 5.0.6. 
+- **[Fix]** Fixed application crashes when the application enters the background if the number of currently playing audios is more than 32.
+- **[Fix]** Fixed application crashes when the application enters the foreground if audios are paused manually after the application enters background.
+- **[Fix]** Fixed bugs.
+
 ### Egret Android Support 5.0.6 Release Notes
 --
 Updated: August 22, 2017
