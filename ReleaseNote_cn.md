@@ -1,6 +1,17 @@
 ##Egret Android Support Release Notes 
 ---
 
+### Egret Android Support 5.0.8 Release Notes
+--
+更新时间：2017年09月19日
+
+miniSDKVersion:14
+
+- **[修复]** 修复输入框光标不能移动的问题。
+- **[改进]** webSocket支持设置protocols。
+- **[改进]** console.log等方法支持多个参数。
+- **[修复]** 修复其它BUG
+
 ### Egret Android Support 5.0.7 Release Notes
 --
 更新时间：2017年09月05日

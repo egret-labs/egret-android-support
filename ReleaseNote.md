@@ -1,6 +1,17 @@
 ##Egret Android Support Release Notes 
 ---
 
+### Egret Android Support 5.0.8 Release Notes
+--
+Updated: September 19, 2017
+
+miniSDKVersion:14
+
+- **[Fix]** Fixed the cursor of input box can not be moved.
+- **[Update]** Allow setting protocols of webSocket.
+- **[Update]** Support multiple parameters for console methods such as conole.log.
+- **[Fix]** Fixed bugs.
+
 ### Egret Android Support 5.0.7 Release Notes
 --
 Updated: September 05, 2017
