@@ -1,6 +1,15 @@
 ##Egret Android Support Release Notes 
 ---
 
+### Egret Android Support 5.0.9 Release Notes
+--
+Updated: October 12, 2017
+
+miniSDKVersion:14
+
+- **[Fix]** Optimize WebSocket, fixed fail to receive the onClose event after some webSocket connections disconnected  while locking the screen.
+- **[Fix]** Fixed bugs.
+
 ### Egret Android Support 5.0.8 Release Notes
 --
 Updated: September 19, 2017
