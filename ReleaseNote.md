@@ -1,6 +1,15 @@
 ##Egret Android Support Release Notes 
 ---
 
+### Egret Android Support 5.0.12 Release Notes
+--
+Updated: November 09, 2017
+
+miniSDKVersion:14
+
+- **[Fix]** Fixed mesh rendering bug on parts of HUAWEI devices.
+- **[Fix]** Fixed bugs.
+
 ### Egret Android Support 5.0.9 Release Notes
 --
 Updated: October 12, 2017

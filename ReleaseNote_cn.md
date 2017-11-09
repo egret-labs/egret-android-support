@@ -1,6 +1,15 @@
 ##Egret Android Support Release Notes 
 ---
 
+### Egret Android Support 5.0.12 Release Notes
+--
+更新时间：2017年11月09日
+
+miniSDKVersion:14
+
+- **[修复]** 修复部分华为机型不显示mesh的问题。
+- **[修复]** 修复其它BUG
+
 ### Egret Android Support 5.0.9 Release Notes
 --
 更新时间：2017年10月12日
